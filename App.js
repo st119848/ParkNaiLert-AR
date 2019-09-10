@@ -53,7 +53,7 @@ var ViroCodeSamplesSceneNavigator = createReactClass({
       return (
         <ViroARSceneNavigator
           initialScene={{
-            scene: arScenes['ARSimpleSample'],
+            scene: arScenes['ARCarDemo'],
           }}
           apiKey={apiKey} />
         );
