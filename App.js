@@ -16,7 +16,6 @@ import {
 } from 'react-native';
 
 import {
-  ViroVRSceneNavigator,
   ViroARSceneNavigator,
 } from 'react-viro';
 
