@@ -16,6 +16,9 @@ import {
   ViroSphere,
   ViroSpotLight,
   ViroQuad,
+  ViroText,
+  ViroConstants,
+  ViroFlexView
 } from 'react-viro';
 
 var createReactClass = require('create-react-class');
@@ -69,7 +72,7 @@ var ARCarDemo = createReactClass({
             position={[0, -0.001, 0]}
             width={2.5} height={2.5}
             arShadowReceiver={true} />
-
+            
         </ViroARImageMarker>
       </ViroARScene>
     );
@@ -85,45 +88,6 @@ var ARCarDemo = createReactClass({
       playAnim: true
     })
   },
-  _selectWhite(){
-    this.setState({
-      texture : "white",
-      tapWhite: true
-    })
-  },
-  _selectBlue(){
-    this.setState({
-      texture : "blue",
-      tapBlue: true
-    })
-  },
-  _selectGrey(){
-    this.setState({
-      texture : "grey",
-      tapGrey: true
-    })
-  },
-  _selectRed(){
-    this.setState({
-      texture : "red",
-      tapRed: true
-    })
-  },
-  _selectYellow(){
-    this.setState({
-      texture : "yellow",
-      tapYellow: true
-    })
-  },
-  _animateFinished(){
-    this.setState({
-      tapWhite: false,
-      tapBlue: false,
-      tapGrey: false,
-      tapRed: false,
-      tapYellow: false,
-    })
-  },
 });
 
 ViroMaterials.createMaterials({
@@ -132,51 +96,7 @@ ViroMaterials.createMaterials({
     diffuseTexture: require('./res/tesla/object_car_main_Base_Color.png'),
     metalnessTexture: require('./res/tesla/object_car_main_Metallic.png'),
     roughnessTexture: require('./res/tesla/object_car_main_Roughness.png'),
-  },
-  blue: {
-    lightingModel: "PBR",
-    diffuseTexture: require('./res/tesla/object_car_main_Base_Color_blue.png'),
-    metalnessTexture: require('./res/tesla/object_car_main_Metallic.png'),
-    roughnessTexture: require('./res/tesla/object_car_main_Roughness.png'),
-  },
-  grey: {
-    lightingModel: "PBR",
-    diffuseTexture: require('./res/tesla/object_car_main_Base_Color_grey.png'),
-    metalnessTexture: require('./res/tesla/object_car_main_Metallic.png'),
-    roughnessTexture: require('./res/tesla/object_car_main_Roughness.png'),
-  },
-  red: {
-    lightingModel: "PBR",
-    diffuseTexture: require('./res/tesla/object_car_main_Base_Color_red.png'),
-    metalnessTexture: require('./res/tesla/object_car_main_Metallic.png'),
-    roughnessTexture: require('./res/tesla/object_car_main_Roughness.png'),
-  },
-  yellow: {
-    lightingModel: "PBR",
-    diffuseTexture: require('./res/tesla/object_car_main_Base_Color_yellow.png'),
-    metalnessTexture: require('./res/tesla/object_car_main_Metallic.png'),
-    roughnessTexture: require('./res/tesla/object_car_main_Roughness.png'),
-  },
-  white_sphere: {
-    lightingModel: "PBR",
-    diffuseColor: "rgb(231,231,231)",
-  },
-  blue_sphere: {
-    lightingModel: "PBR",
-    diffuseColor: "rgb(19,42,143)",
-  },
-  grey_sphere: {
-    lightingModel: "PBR",
-    diffuseColor: "rgb(75,76,79)",
-  },
-  red_sphere: {
-    lightingModel: "PBR",
-    diffuseColor: "rgb(168,0,0)",
-  },
-  yellow_sphere: {
-    lightingModel: "PBR",
-    diffuseColor: "rgb(200,142,31)",
-  },
+  }
 });
 
 ViroARTrackingTargets.createTargets({
@@ -189,6 +109,33 @@ ViroARTrackingTargets.createTargets({
     source : require('./res/logo2.png'),
     orientation : "Left",
     physicalWidth : 0.165 // real world width in meters
+  }
+});
+
+var styles = StyleSheet.create({
+  textStyle: {
+    flex: .5,
+    fontFamily: 'Roboto',
+    fontSize: 30,
+    color: '#ffffff',
+    textAlignVertical: 'top',
+    textAlign: 'left',
+    fontWeight: 'bold',
+  },
+  card: {
+    flexDirection: 'column'
+  },
+  cardWrapper: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    padding: 0.001,
+    flex: .5
+  },
+  subText: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    flex: .5
   }
 });
 
