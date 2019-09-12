@@ -42,47 +42,10 @@ var ARCarDemo = createReactClass({
         <ViroLightingEnvironment source={require('./res/tesla/garage_1k.hdr')}/>
 
         <ViroARImageMarker target={"logo"} onAnchorFound={this._onAnchorFound} pauseUpdates={this.state.pauseUpdates}>
-          <ViroNode scale={[0, 0, 0]} transformBehaviors={["billboardY"]} animation={{name:this.state.animName, run:this.state.playAnim,}}>
-            <ViroSphere materials={["white_sphere"]}
-              heightSegmentCount={20} widthSegmentCount={20} radius={.03}
-              position={[-.2, .25, 0]}
-              onClick={this._selectWhite}
-              animation={{name:"tapAnimation", run:this.state.tapWhite, onFinish:this._animateFinished}}
-              shadowCastingBitMask={0} />
-
-            <ViroSphere materials={["blue_sphere"]}
-              heightSegmentCount={20} widthSegmentCount={20} radius={.03}
-              position={[-.1, .25, 0]}
-              onClick={this._selectBlue}
-              animation={{name:"tapAnimation", run:this.state.tapBlue, onFinish:this._animateFinished}}
-              shadowCastingBitMask={0} />
-
-            <ViroSphere materials={["grey_sphere"]}
-              heightSegmentCount={20} widthSegmentCount={20} radius={.03}
-              position={[0, .25, 0]}
-              onClick={this._selectGrey}
-              animation={{name:"tapAnimation", run:this.state.tapGrey, onFinish:this._animateFinished}}
-              shadowCastingBitMask={0} />
-
-            <ViroSphere materials={["red_sphere"]}
-              heightSegmentCount={20} widthSegmentCount={20} radius={.03}
-              position={[.1, .25, 0]}
-              onClick={this._selectRed}
-              animation={{name:"tapAnimation", run:this.state.tapRed, onFinish:this._animateFinished}}
-              shadowCastingBitMask={0} />
-
-            <ViroSphere materials={["yellow_sphere"]}
-              heightSegmentCount={20} widthSegmentCount={20} radius={.03}
-              position={[.2, .25, 0]}
-              onClick={this._selectYellow}
-              animation={{name:"tapAnimation", run:this.state.tapYellow, onFinish:this._animateFinished}}
-              shadowCastingBitMask={0}/>
-          </ViroNode>
-
           <Viro3DObject
             scale={[0, 0, 0]}
-            source={require('./res/tesla/object_car.obj')}
-            resources={[require('./res/tesla/object_car.mtl'),
+            source={require('./res/tesla/jar.obj')}
+            resources={[require('./res/tesla/jar.mtl'),
                         ]}
             type="OBJ"
             materials={this.state.texture}
@@ -219,7 +182,12 @@ ViroMaterials.createMaterials({
 ViroARTrackingTargets.createTargets({
   logo : {
     source : require('./res/logo.png'),
-    orientation : "Up",
+    orientation : "Left",
+    physicalWidth : 0.165 // real world width in meters
+  },
+  logo2 : {
+    source : require('./res/logo2.png'),
+    orientation : "Left",
     physicalWidth : 0.165 // real world width in meters
   }
 });
@@ -229,13 +197,8 @@ ViroAnimations.registerAnimations({
                   duration: 500, easing: "bounce"},
     scaleDown:{properties:{scaleX:0, scaleY:0, scaleZ:0,},
                   duration: 200,},
-    scaleCar:{properties:{scaleX:.09, scaleY:.09, scaleZ:.09,},
+    scaleCar:{properties:{scaleX:.002, scaleY:.002, scaleZ:.002,},
                   duration: 500, easing: "bounce"},
-    scaleSphereUp:{properties:{scaleX:.8, scaleY:.8, scaleZ:.8,},
-                  duration: 50, easing: "easeineaseout"},
-    scaleSphereDown:{properties:{scaleX:1, scaleY:1, scaleZ:1,},
-                  duration: 50, easing: "easeineaseout"},
-    tapAnimation:[["scaleSphereUp", "scaleSphereDown"],]
 });
 
 module.exports = ARCarDemo;
