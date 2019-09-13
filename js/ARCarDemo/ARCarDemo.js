@@ -61,7 +61,7 @@ var ARCarDemo = createReactClass({
             >
               <ViroText
                 textClipMode="None"
-                text="BUZZ FREEZE IZ DA BEST"
+                text="The best preview text people should see, I'll make it so long so it's easier to notice the text."
                 scale={[.015, .015, .015]}
                 position={[0, 0, 0.1]}
                 style={styles.textStyle}
