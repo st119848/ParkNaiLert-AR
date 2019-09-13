@@ -23,18 +23,12 @@ import {
 
 var createReactClass = require('create-react-class');
 
-
 var ARCarDemo = createReactClass({
   getInitialState() {
     return {
       texture: "white",
       playAnim: false,
       animateCar: false,
-      tapWhite: false,
-      tapBlue: false,
-      tapGrey: false,
-      tapRed: false,
-      tapYellow: false,
     }
   },
 
@@ -53,8 +47,27 @@ var ARCarDemo = createReactClass({
             type="OBJ"
             materials={this.state.texture}
             onClick={this._toggleButtons}
+            position={[0.1, 0.1, 0.1]}
+            rotation={[0, 0, -90]}
             animation={{name:"scaleCar", run:this.state.animateCar,}} />
-
+            <ViroFlexView
+                  rotation={[-90, -90, 0]}
+                  height={0.03}
+                  width={0.05}
+                  style={styles.card}
+            >
+            <ViroFlexView
+              style={styles.cardWrapper}
+            >
+              <ViroText
+                textClipMode="None"
+                text="BUZZ FREEZE IZ DA BEST"
+                scale={[.015, .015, .015]}
+                position={[0, 0, 0.1]}
+                style={styles.textStyle}
+              />
+            </ViroFlexView>
+          </ViroFlexView>
           <ViroSpotLight
             innerAngle={5}
             outerAngle={25}
@@ -72,6 +85,7 @@ var ARCarDemo = createReactClass({
             position={[0, -0.001, 0]}
             width={2.5} height={2.5}
             arShadowReceiver={true} />
+          
             
         </ViroARImageMarker>
       </ViroARScene>
@@ -82,34 +96,6 @@ var ARCarDemo = createReactClass({
       animateCar: true,
     })
   },
-  _toggleButtons() {
-    this.setState({
-      animName: (this.state.animName == "scaleUp" ? "scaleDown" : "scaleUp"),
-      playAnim: true
-    })
-  },
-});
-
-ViroMaterials.createMaterials({
-  white: {
-    lightingModel: "PBR",
-    diffuseTexture: require('./res/tesla/object_car_main_Base_Color.png'),
-    metalnessTexture: require('./res/tesla/object_car_main_Metallic.png'),
-    roughnessTexture: require('./res/tesla/object_car_main_Roughness.png'),
-  }
-});
-
-ViroARTrackingTargets.createTargets({
-  logo : {
-    source : require('./res/logo.png'),
-    orientation : "Left",
-    physicalWidth : 0.165 // real world width in meters
-  },
-  logo2 : {
-    source : require('./res/logo2.png'),
-    orientation : "Left",
-    physicalWidth : 0.165 // real world width in meters
-  }
 });
 
 var styles = StyleSheet.create({
@@ -139,13 +125,31 @@ var styles = StyleSheet.create({
   }
 });
 
+ViroMaterials.createMaterials({
+  white: {
+    lightingModel: "PBR",
+    diffuseTexture: require('./res/tesla/object_car_main_Base_Color.png'),
+    metalnessTexture: require('./res/tesla/object_car_main_Metallic.png'),
+    roughnessTexture: require('./res/tesla/object_car_main_Roughness.png'),
+  }
+});
+
+ViroARTrackingTargets.createTargets({
+  logo : {
+    source : require('./res/logo.png'),
+    orientation : "Left",
+    physicalWidth : 0.165 // real world width in meters
+  },
+  logo2 : {
+    source : require('./res/logo2.png'),
+    orientation : "Left",
+    physicalWidth : 0.165 // real world width in meters
+  }
+});
+
 ViroAnimations.registerAnimations({
-    scaleUp:{properties:{scaleX:1, scaleY:1, scaleZ:1,},
-                  duration: 500, easing: "bounce"},
-    scaleDown:{properties:{scaleX:0, scaleY:0, scaleZ:0,},
-                  duration: 200,},
     scaleCar:{properties:{scaleX:.002, scaleY:.002, scaleZ:.002,},
-                  duration: 500, easing: "bounce"},
+                  duration: 5000, easing: "bounce"},
 });
 
 module.exports = ARCarDemo;
