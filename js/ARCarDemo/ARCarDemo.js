@@ -2,7 +2,9 @@
 
 import React, { Component } from 'react';
 
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
+
+import Data from '../../';
 
 import {
   ViroARScene,
@@ -24,7 +26,8 @@ import {
 var createReactClass = require('create-react-class');
 
 var ARCarDemo = createReactClass({
-  getInitialState() {
+
+    getInitialState() {
     return {
       texture: "white",
       playAnim: false,
@@ -32,36 +35,34 @@ var ARCarDemo = createReactClass({
     }
   },
 
-  render: function() {
+  render: function () {
     return (
       <ViroARScene>
-
-        <ViroLightingEnvironment source={require('./res/tesla/garage_1k.hdr')}/>
-
+        <ViroLightingEnvironment source={require('./res/3D/garage_1k.hdr')} />
         <ViroARImageMarker target={"logo"} onAnchorFound={this._onAnchorFound} pauseUpdates={this.state.pauseUpdates}>
           <Viro3DObject
             scale={[0, 0, 0]}
-            source={require('./res/tesla/jar.obj')}
-            resources={[require('./res/tesla/jar.mtl'),
-                        ]}
+            source={require('./res/3D/jar.obj')}
+            resources={[require('./res/3D/jar.mtl'),
+            ]}
             type="OBJ"
             materials={this.state.texture}
             onClick={this._toggleButtons}
             position={[0.1, 0.1, 0.1]}
             rotation={[0, 0, -90]}
-            animation={{name:"scaleCar", run:this.state.animateCar,}} />
-            <ViroFlexView
-                  rotation={[-90, -90, 0]}
-                  height={0.03}
-                  width={0.05}
-                  style={styles.card}
-            >
+            animation={{ name: "scaleCar", run: this.state.animateCar, }} />
+          <ViroFlexView
+            rotation={[-90, -90, 0]}
+            height={0.03}
+            width={0.05}
+            style={styles.card}
+          >
             <ViroFlexView
               style={styles.cardWrapper}
             >
               <ViroText
                 textClipMode="None"
-                text="The best preview text people should see, I'll make it so long so it's easier to notice the text."
+                text="TESTTT"
                 scale={[.015, .015, .015]}
                 position={[0, 0, 0.1]}
                 style={styles.textStyle}
@@ -71,22 +72,23 @@ var ARCarDemo = createReactClass({
           <ViroSpotLight
             innerAngle={5}
             outerAngle={25}
-            direction={[0,-1,0]}
+            direction={[0, -1, 0]}
             position={[0, 5, 1]}
             color="#ffffff"
             castsShadow={true}
             shadowMapSize={2048}
             shadowNearZ={2}
             shadowFarZ={7}
-            shadowOpacity={.7} />
+            shadowOpacity={.7} 
+          />
 
           <ViroQuad
             rotation={[-90, 0, 0]}
             position={[0, -0.001, 0]}
             width={2.5} height={2.5}
-            arShadowReceiver={true} />
-          
-            
+            arShadowReceiver={true}
+          />
+
         </ViroARImageMarker>
       </ViroARScene>
     );
@@ -128,28 +130,30 @@ var styles = StyleSheet.create({
 ViroMaterials.createMaterials({
   white: {
     lightingModel: "PBR",
-    diffuseTexture: require('./res/tesla/object_car_main_Base_Color.png'),
-    metalnessTexture: require('./res/tesla/object_car_main_Metallic.png'),
-    roughnessTexture: require('./res/tesla/object_car_main_Roughness.png'),
+    diffuseTexture: require('./res/3D/object_car_main_Base_Color.png'),
+    metalnessTexture: require('./res/3D/object_car_main_Metallic.png'),
+    roughnessTexture: require('./res/3D/object_car_main_Roughness.png'),
   }
 });
 
 ViroARTrackingTargets.createTargets({
-  logo : {
-    source : require('./res/logo.png'),
-    orientation : "Left",
-    physicalWidth : 0.165 // real world width in meters
+  logo: {
+    source: require('./res/logo.jpg'),
+    orientation: "Left",
+    physicalWidth: 0.165 // real world width in meters
   },
-  logo2 : {
-    source : require('./res/logo2.png'),
-    orientation : "Left",
-    physicalWidth : 0.165 // real world width in meters
+  logo2: {
+    source: require('./res/logo2.png'),
+    orientation: "Left",
+    physicalWidth: 0.165 // real world width in meters
   }
 });
 
 ViroAnimations.registerAnimations({
-    scaleCar:{properties:{scaleX:.002, scaleY:.002, scaleZ:.002,},
-                  duration: 5000, easing: "bounce"},
+  scaleCar: {
+    properties: { scaleX: .002, scaleY: .002, scaleZ: .002, },
+    duration: 5000, easing: "bounce"
+  },
 });
 
 module.exports = ARCarDemo;
