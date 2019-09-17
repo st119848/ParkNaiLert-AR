@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 import { StyleSheet } from 'react-native';
 
-import Data from '../../';
+import NLdata from './res/NLdata.json';
 
 import {
   ViroARScene,
@@ -24,6 +24,8 @@ import {
 } from 'react-viro';
 
 var createReactClass = require('create-react-class');
+
+const NLdata = require('./res/data.js/index.js');
 
 var ARCarDemo = createReactClass({
 
@@ -48,7 +50,7 @@ var ARCarDemo = createReactClass({
             type="OBJ"
             materials={this.state.texture}
             onClick={this._toggleButtons}
-            position={[0.1, 0.1, 0.1]}
+            position={[0.05, 0, 0.05]}
             rotation={[0, 0, -90]}
             animation={{ name: "scaleCar", run: this.state.animateCar, }} />
           <ViroFlexView
@@ -62,9 +64,9 @@ var ARCarDemo = createReactClass({
             >
               <ViroText
                 textClipMode="None"
-                text="TESTTT"
+                text="HHHHHHHHHHhhhHHHHHHhhhHHHHHHhhhHHHHHHhhhHHHHHHhhhHHHHHHhhhHHHHHHhhhHHHHHHhhhHHHHHHhhh"
                 scale={[.015, .015, .015]}
-                position={[0, 0, 0.1]}
+                position={[-0.05, 0, 0.05]}
                 style={styles.textStyle}
               />
             </ViroFlexView>
