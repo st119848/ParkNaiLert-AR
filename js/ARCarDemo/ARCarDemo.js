@@ -23,24 +23,22 @@ import {
   ViroFlexView
 } from 'react-viro';
 
-var createReactClass = require('create-react-class');
+const createReactClass = require('create-react-class');
 
-const NLdata = require('./res/data.js/index.js');
+const ARCarDemo = createReactClass({
 
-var ARCarDemo = createReactClass({
-
-    getInitialState() {
+  getInitialState() {
     return {
-      texture: "white",
+      texture: 'white',
       playAnim: false,
       animateCar: false,
     }
   },
 
   render: function () {
+
     return (
       <ViroARScene>
-        <ViroLightingEnvironment source={require('./res/3D/garage_1k.hdr')} />
         <ViroARImageMarker target={"logo"} onAnchorFound={this._onAnchorFound} pauseUpdates={this.state.pauseUpdates}>
           <Viro3DObject
             scale={[0, 0, 0]}
@@ -64,7 +62,7 @@ var ARCarDemo = createReactClass({
             >
               <ViroText
                 textClipMode="None"
-                text="HHHHHHHHHHhhhHHHHHHhhhHHHHHHhhhHHHHHHhhhHHHHHHhhhHHHHHHhhhHHHHHHhhhHHHHHHhhhHHHHHHhhh"
+                text={String(NLdata.value[0].detail)}
                 scale={[.015, .015, .015]}
                 position={[-0.05, 0, 0.05]}
                 style={styles.textStyle}
@@ -81,7 +79,7 @@ var ARCarDemo = createReactClass({
             shadowMapSize={2048}
             shadowNearZ={2}
             shadowFarZ={7}
-            shadowOpacity={.7} 
+            shadowOpacity={.7}
           />
 
           <ViroQuad
@@ -102,10 +100,38 @@ var ARCarDemo = createReactClass({
   },
 });
 
-var styles = StyleSheet.create({
+ViroMaterials.createMaterials({
+  white: {
+    shininess: 2.0,
+    lightingModel: "PBR",
+    diffuseTexture: require('./res/Test2.jpg'),
+  }
+});
+
+ViroARTrackingTargets.createTargets({
+  logo: {
+    source: require('./res/Test2.jpg'),
+    orientation: "Left",
+    physicalWidth: 0.165 // real world width in meters
+  },
+  logo: {
+    source: require('./res/logo2.png'),
+    orientation: "Left",
+    physicalWidth: 0.165 // real world width in meters
+  }
+});
+
+ViroAnimations.registerAnimations({
+  scaleCar: {
+    properties: { scaleX: .002, scaleY: .002, scaleZ: .002, },
+    duration: 5000, easing: "bounce"
+  },
+});
+
+const styles = StyleSheet.create({
   textStyle: {
     flex: .5,
-    fontFamily: 'Roboto',
+    fontFamily: "Thonburi, Pingfang HK",
     fontSize: 30,
     color: '#ffffff',
     textAlignVertical: 'top',
@@ -120,41 +146,6 @@ var styles = StyleSheet.create({
     alignItems: 'flex-start',
     padding: 0.001,
     flex: .5
-  },
-  subText: {
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
-    flex: .5
-  }
-});
-
-ViroMaterials.createMaterials({
-  white: {
-    lightingModel: "PBR",
-    diffuseTexture: require('./res/3D/object_car_main_Base_Color.png'),
-    metalnessTexture: require('./res/3D/object_car_main_Metallic.png'),
-    roughnessTexture: require('./res/3D/object_car_main_Roughness.png'),
-  }
-});
-
-ViroARTrackingTargets.createTargets({
-  logo: {
-    source: require('./res/logo.jpg'),
-    orientation: "Left",
-    physicalWidth: 0.165 // real world width in meters
-  },
-  logo2: {
-    source: require('./res/logo2.png'),
-    orientation: "Left",
-    physicalWidth: 0.165 // real world width in meters
-  }
-});
-
-ViroAnimations.registerAnimations({
-  scaleCar: {
-    properties: { scaleX: .002, scaleY: .002, scaleZ: .002, },
-    duration: 5000, easing: "bounce"
   },
 });
 
