@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 import { StyleSheet } from 'react-native';
 
-import NLdata from './res/NLdata.json';
+import ARData from './res/ARData.json';
 
 import {
   ViroARScene,
@@ -25,7 +25,7 @@ import {
 
 const createReactClass = require('create-react-class');
 
-const ARCarDemo = createReactClass({
+const ParkNaiLertAR = createReactClass({
 
   allMarkers : ["logo", "logo2", "logo3"],
 
@@ -34,7 +34,7 @@ const ARCarDemo = createReactClass({
       {
         texture: 'white',
         playAnim: false,
-        animateCar: false,
+        animateAppearance: false,
         isShow: false
       }
     const varyState = {}
@@ -61,7 +61,7 @@ const ARCarDemo = createReactClass({
             position={[0.05, 0, 0.05]}
             rotation={[0, 0, -90]}
             visible={ this.state["isShow" + marker]}
-            animation={{ name: "scaleCar", run: this.state.animateCar, }} />
+            animation={{ name: "ThreeDScale", run: this.state.animateAppearance, }} />
           <ViroFlexView
             rotation={[-90, -90, 0]}
             height={0.03}
@@ -74,7 +74,7 @@ const ARCarDemo = createReactClass({
             >
               <ViroText
                 textClipMode="None"
-                text={String(NLdata.value[0].detail)}
+                text={String(ARData.value[0].detail)}
                 scale={[.015, .015, .015]}
                 position={[-0.05, 0, 0.05]}
                 style={styles.textStyle}
@@ -120,7 +120,7 @@ const ARCarDemo = createReactClass({
        }
      });
     if(allNotShow){
-      let stateForSet = { animateCar: true};
+      let stateForSet = { animateAppearance: true};
       stateForSet[ "isShow"+marker] = true;
       this.setState(stateForSet);
     }
@@ -130,8 +130,7 @@ const ARCarDemo = createReactClass({
 ViroMaterials.createMaterials({
   white: {
     shininess: 2.0,
-    lightingModel: "PBR",
-    diffuseTexture: require('./res/Test2.jpg'),
+    lightingModel: "PBR"
   }
 });
 
@@ -154,7 +153,7 @@ ViroARTrackingTargets.createTargets({
 });
 
 ViroAnimations.registerAnimations({
-  scaleCar: {
+  ThreeDScale: {
     properties: { scaleX: .002, scaleY: .002, scaleZ: .002, },
     duration: 5000, easing: "bounce"
   },
@@ -168,7 +167,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     textAlignVertical: 'top',
     textAlign: 'left',
-    //fontWeight: 'bold',
+    fontWeight: 'bold',
   },
   card: {
     flexDirection: 'column'
@@ -181,4 +180,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = ARCarDemo;
+module.exports = ParkNaiLertAR;

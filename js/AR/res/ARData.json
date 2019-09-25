@@ -1,0 +1,28 @@
+{
+    "id": 1,
+    "source": "require('./res/Test3.jpg')",
+    "orientation": "Left",
+    "physicalWidth": 0.165,
+    "value": [
+        {
+            "language_id": 1,
+            "detail": "",
+            "title": ""
+        },
+        {
+            "language_id": 2,
+            "detail": "",
+            "title": ""
+        },
+        {
+            "language_id": 3,
+            "detail": "",
+            "title": ""
+        },
+        {
+            "language_id": 4,
+            "detail": "",
+            "title": ""
+        }
+    ]
+},
