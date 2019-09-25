@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     textAlignVertical: 'top',
     textAlign: 'left',
-    //fontWeight: 'bold',
+    fontWeight: 'bold',
   },
   card: {
     flexDirection: 'column'
