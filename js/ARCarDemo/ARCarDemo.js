@@ -131,7 +131,6 @@ ViroMaterials.createMaterials({
   white: {
     shininess: 2.0,
     lightingModel: "PBR",
-    diffuseTexture: require('./res/Test2.jpg'),
   }
 });
 
