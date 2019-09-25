@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 import { StyleSheet } from 'react-native';
 
-import NLdata from './res/NLdata.json';
+import ARData from './res/ARData.json';
 
 import {
   ViroARScene,
@@ -74,7 +74,7 @@ const ARCarDemo = createReactClass({
             >
               <ViroText
                 textClipMode="None"
-                text={String(NLdata.value[0].detail)}
+                text={String(ARData.value[0].detail)}
                 scale={[.015, .015, .015]}
                 position={[-0.05, 0, 0.05]}
                 style={styles.textStyle}
