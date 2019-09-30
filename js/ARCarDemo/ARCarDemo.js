@@ -26,7 +26,7 @@ const createReactClass = require('create-react-class');
 
 const ARCarDemo = createReactClass({
 
-  allMarkers: ["logo", "logo2", "logo3"],
+  allMarkers: ["1", "2", "3", "4", "5", "6", "7", "8", "17"],
 
   getInitialState() {
     const baseState =
@@ -72,7 +72,7 @@ const ARCarDemo = createReactClass({
               >
                 <ViroText
                   textClipMode="None"
-                  text={String(ARData.value[0].detail)}
+                  text={String(ARData[marker-1].value[0].detail)}
                   scale={[.015, .015, .015]}
                   position={[-0.05, 0, 0.05]}
                   style={styles.textStyle}
@@ -133,18 +133,58 @@ ViroMaterials.createMaterials({
 });
 
 ViroARTrackingTargets.createTargets({
-  logo: {
-    source: require('./res/Test3.jpg'),
+  "1": {
+    source: require('./res/1.jpeg'),
     orientation: "Left",
-    physicalWidth: ARData.physicalWidth // real world width in meters
+    physicalWidth: 0.165 // real world width in meters
   },
-  logo2: {
-    source: require('./res/logo2.png'),
+  "2": {
+    source: require('./res/2.jpeg'),
     orientation: "Left",
-    physicalWidth: ARData.physicalWidth // real world width in meters
+    physicalWidth: 0.165 // real world width in meters
   },
-  logo3: {
-    source: require('./res/logo.png'),
+  "3": {
+    source: require('./res/3.jpeg'),
+    orientation: "Left",
+    physicalWidth: 0.165 // real world width in meters
+  },
+  "4": {
+    source: require('./res/4.jpeg'),
+    orientation: "Left",
+    physicalWidth: 0.165 // real world width in meters
+  },
+  "5": {
+    source: require('./res/5.jpeg'),
+    orientation: "Left",
+    physicalWidth: 0.165 // real world width in meters
+  },
+  "6": {
+    source: require('./res/6.jpeg'),
+    orientation: "Left",
+    physicalWidth: 0.165 // real world width in meters
+  },
+  "6": {
+    source: require('./res/9.jpeg'),
+    orientation: "Left",
+    physicalWidth: 0.165 // real world width in meters
+  },
+  "7": {
+    source: require('./res/7.jpeg'),
+    orientation: "Left",
+    physicalWidth: 0.165 // real world width in meters
+  },
+  "8": {
+    source: require('./res/8.jpeg'),
+    orientation: "Left",
+    physicalWidth: 0.165 // real world width in meters
+  },
+  "17": {
+    source: require('./res/171.jpeg'),
+    orientation: "Left",
+    physicalWidth: 0.165 // real world width in meters
+  },
+  "17": {
+    source: require('./res/172.jpeg'),
     orientation: "Left",
     physicalWidth: 0.165 // real world width in meters
   }
