@@ -1,6 +1,6 @@
 {
     "id": 1,
-    "source": "1.jpeg",
+    "source": "require('./res/Test3.jpg')",
     "orientation": "Left",
     "physicalWidth": 0.165,
     "value": [
