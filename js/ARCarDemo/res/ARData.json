@@ -3,6 +3,10 @@
     "source": "require('./res/Test3.jpg')",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
+    "DSource": "require('./res/3D/jar.obj')",
+    "DResource": "require('./res/3D/jar.mtl')",
     "value": [
         {
             "language_id": 1,
@@ -31,6 +35,8 @@
     "source": "2.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -59,6 +65,8 @@
     "source": "3.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -115,6 +123,8 @@
     "source": "5.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -143,6 +153,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -171,6 +183,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -199,6 +213,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -227,6 +243,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -255,6 +273,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -283,6 +303,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -311,6 +333,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -339,6 +363,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -367,6 +393,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -395,6 +423,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -423,6 +453,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -451,6 +483,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -479,6 +513,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -507,6 +543,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -535,6 +573,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -563,6 +603,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -591,6 +633,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -619,6 +663,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -647,6 +693,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -675,6 +723,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -703,6 +753,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -731,6 +783,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -759,6 +813,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -787,6 +843,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -815,6 +873,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -843,6 +903,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -871,6 +933,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -899,6 +963,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -927,6 +993,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -955,6 +1023,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -983,6 +1053,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -1011,6 +1083,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -1039,6 +1113,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -1067,6 +1143,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -1095,6 +1173,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -1123,6 +1203,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -1151,6 +1233,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -1179,6 +1263,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -1207,6 +1293,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -1235,6 +1323,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -1263,6 +1353,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -1291,6 +1383,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -1319,6 +1413,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -1347,6 +1443,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,
@@ -1375,6 +1473,8 @@
     "source": "1.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.165,
+    "position": [-0.05, 0, 0.05],
+    "scale": [0.015, 0.015, 0.015],
     "value": [
         {
             "language_id": 1,

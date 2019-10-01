@@ -62,6 +62,7 @@ const ARCarDemo = createReactClass({
               animation={{ name: "scaleCar", run: this.state.animateCar, }} />
             <ViroFlexView
               rotation={[-90, -90, 0]}
+              transformBehaviors={["billboard"]}
               height={0.03}
               width={0.05}
               style={styles.card}
@@ -73,8 +74,8 @@ const ARCarDemo = createReactClass({
                 <ViroText
                   textClipMode="None"
                   text={String(ARData[marker-1].value[0].detail)}
-                  scale={[.015, .015, .015]}
-                  position={[-0.05, 0, 0.05]}
+                  scale={ARData[marker-1].scale}
+                  position={ARData[marker-1].position}
                   style={styles.textStyle}
                 />
               </ViroFlexView>
@@ -91,14 +92,12 @@ const ARCarDemo = createReactClass({
               shadowFarZ={7}
               shadowOpacity={.7}
             />
-
             <ViroQuad
               rotation={[-90, 0, 0]}
               position={[0, -0.001, 0]}
               width={2.5} height={2.5}
               arShadowReceiver={true}
             />
-
           </ViroARImageMarker>
         ))}
 
@@ -200,7 +199,7 @@ ViroAnimations.registerAnimations({
 const styles = StyleSheet.create({
   textStyle: {
     flex: .5,
-    fontFamily: "Thonburi, Pingfang HK",
+    fontFamily: "Rosemary, Thonburi, Pingfang HK",
     fontSize: 30,
     color: '#ffffff',
     textAlignVertical: 'top',
@@ -215,7 +214,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     padding: 0.001,
     flex: .5
-  },
+  }
 });
 
 module.exports = ARCarDemo;
