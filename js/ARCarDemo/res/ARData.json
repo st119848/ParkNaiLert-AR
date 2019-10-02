@@ -3,10 +3,8 @@
     "source": "require('./res/Test3.jpg')",
     "orientation": "Left",
     "physicalWidth": 0.165,
-    "position": [-0.05, 0, 0.05],
-    "scale": [0.015, 0.015, 0.015],
-    "DSource": "require('./res/3D/jar.obj')",
-    "DResource": "require('./res/3D/jar.mtl')",
+    "position": [0, 0, 0],
+    "scale": [0.15, 0.15, 0.15],
     "value": [
         {
             "language_id": 1,
