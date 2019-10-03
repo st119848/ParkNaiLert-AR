@@ -24,7 +24,7 @@ import {
 
 const createReactClass = require('create-react-class');
 
-const ARCarDemo = createReactClass({
+const PNLAR = createReactClass({
 
   allMarkers: ["1"],
 
@@ -167,4 +167,4 @@ const styles = StyleSheet.create({
   }
 });
 
-module.exports = ARCarDemo;
+module.exports = PNLAR;

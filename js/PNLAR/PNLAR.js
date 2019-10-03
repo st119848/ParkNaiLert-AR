@@ -24,7 +24,7 @@ import {
 
 const createReactClass = require('create-react-class');
 
-const ARCarDemo = createReactClass({
+const PNLAR = createReactClass({
 
   allMarkers: ["1"],
 
@@ -33,7 +33,7 @@ const ARCarDemo = createReactClass({
     {
       texture: 'white',
       playAnim: false,
-      animateCar: false,
+      animateObject: false,
       isShow: false
     }
     const varyState = {}
@@ -59,7 +59,7 @@ const ARCarDemo = createReactClass({
               position={[0.05, 0, 0.05]}
               rotation={[0, 0, -90]}
               visible={this.state["isShow" + marker]}
-              animation={{ name: "scaleCar", run: this.state.animateCar, }}
+              animation={{ name: "scaleObject", run: this.state.animateObject, }}
             />
             <ViroFlexView
               rotation={[-90, -90, 0]}
@@ -74,9 +74,9 @@ const ARCarDemo = createReactClass({
               >
                 <ViroText
                   textClipMode="None"
-                  text={String(ARData[marker-1].value[0].detail)}
+                  text={String(ARData[marker - 1].value[0].detail)}
                   scale={ARData[marker - 1].scale}
-                  position={ARData[marker-1].position}
+                  position={ARData[marker - 1].position}
                   style={styles.textStyle}
                 />
               </ViroFlexView>
@@ -93,8 +93,7 @@ const ARCarDemo = createReactClass({
               shadowFarZ={7}
               shadowOpacity={.7}
             />
-            
-            
+
           </ViroARImageMarker>
         ))}
 
@@ -114,7 +113,7 @@ const ARCarDemo = createReactClass({
       }
     });
     if (allNotShow) {
-      let stateForSet = { animateCar: true };
+      let stateForSet = { animateObject: true };
       stateForSet["isShow" + marker] = true;
       this.setState(stateForSet);
     }
@@ -137,7 +136,7 @@ ViroARTrackingTargets.createTargets({
 });
 
 ViroAnimations.registerAnimations({
-  scaleCar: {
+  scaleObject: {
     properties: { scaleX: .002, scaleY: .002, scaleZ: .002, },
     duration: 5000, easing: "bounce"
   },
@@ -146,11 +145,11 @@ ViroAnimations.registerAnimations({
 const styles = StyleSheet.create({
   textStyle: {
     flex: .5,
-    fontFamily: "Rosemary, Thonburi, Pingfang HK",
+    fontFamily: "Thonburi, Pingfang HK",
     fontSize: 20,
     color: '#ffffff',
     textAlignVertical: 'top',
-    textAlign: 'center',
+    textAlign: 'justify',
     fontWeight: 'bold',
   },
   card: {
@@ -164,4 +163,4 @@ const styles = StyleSheet.create({
   }
 });
 
-module.exports = ARCarDemo;
+module.exports = PNLAR;

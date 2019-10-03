@@ -27,7 +27,7 @@ var createReactClass = require('create-react-class');
 var apiKey = "185779F9-FAEC-4950-BF69-454D6BDD4EC6";
 
 var arScenes = {
-  'ARCarDemo' : require('./js/ARCarDemo/ARCarDemo.js'),
+  'PNLAR' : require('./js/PNLAR/PNLAR.js'),
 }
 
 var showARScene = true;
@@ -39,7 +39,7 @@ var ViroCodeSamplesSceneNavigator = createReactClass({
       return (
         <ViroARSceneNavigator
           initialScene={{
-            scene: arScenes['ARCarDemo'],
+            scene: arScenes['PNLAR'],
           }}
           apiKey={apiKey} />
         );
