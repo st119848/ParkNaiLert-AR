@@ -49,18 +49,6 @@ const PNLAR = createReactClass({
       <ViroARScene>
         {this.allMarkers.map((marker) => (
           <ViroARImageMarker target={marker} onAnchorFound={() => this._onAnchorFound(marker)} pauseUpdates={this.state.pauseUpdates}>
-            <Viro3DObject
-              scale={[0, 0, 0]}
-              source={require('./res/3D/jar.obj')}
-              resources={[require('./res/3D/jar.mtl'),]}
-              type="OBJ"
-              materials={this.state.texture}
-              onClick={this._toggleButtons}
-              position={[0.05, 0, 0.05]}
-              rotation={[0, 0, -90]}
-              visible={this.state["isShow" + marker]}
-              animation={{ name: "scaleObject", run: this.state.animateObject, }}
-            />
             <ViroFlexView
               rotation={[-90, -90, 0]}
               transformBehaviors={["billboard"]}
@@ -76,7 +64,11 @@ const PNLAR = createReactClass({
                   textClipMode="None"
                   text={String(ARData[marker - 1].value[0].detail)}
                   scale={ARData[marker - 1].scale}
-                  position={ARData[marker - 1].position}
+                  position={Array.from([
+                    (parseFloat(ARData[marker - 1].textPosition[0]) + parseFloat(ARData[marker - 1].corePosition[0])),
+                    (parseFloat(ARData[marker - 1].textPosition[1]) + parseFloat(ARData[marker - 1].corePosition[1])),
+                    (parseFloat(ARData[marker - 1].textPosition[2]) + parseFloat(ARData[marker - 1].corePosition[2]))
+                  ])}
                   style={styles.textStyle}
                 />
               </ViroFlexView>
@@ -131,7 +123,7 @@ ViroARTrackingTargets.createTargets({
   "1": {
     source: require('./res/1.jpeg'),
     orientation: "Left",
-    physicalWidth: 0.10 // real world width in meters
+    physicalWidth: ARData[0].physicalWidth // real world width in meters
   }
 });
 
