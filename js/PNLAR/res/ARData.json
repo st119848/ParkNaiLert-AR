@@ -4,7 +4,7 @@
     "orientation": "Left",
     "physicalWidth": 0.125,
     "corePosition": [0, 0, 0],
-    "textPosition": [0, 0, 0.4],
+    "textPosition": [0, 0, 0.2],
     "scale": [0.15, 0.15, 0.15],
     "value": [
         {

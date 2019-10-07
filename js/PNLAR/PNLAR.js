@@ -9,6 +9,7 @@ import {
   ViroMaterials,
   ViroNode,
   ViroAnimations,
+  ViroImage,
   Viro3DObject,
   ViroLightingEnvironment,
   ViroARImageMarker,
@@ -32,15 +33,25 @@ const PNLAR = createReactClass({
     const baseState =
     {
       texture: 'white',
+      textLangTitle: "",
+      textLangDetail: "Tap to enable language selection",
+      marker: "test",
       playAnim: false,
       animateObject: false,
-      isShow: false
+      isShow: false,
+      tapTh: false,
+      tapEn: false,
+      tapCh: false,
+      tapJp: false,
     }
     const varyState = {}
     this.allMarkers.forEach((marker) => {
       varyState['isShow' + marker] = false;
     })
-    return { ...baseState, ...varyState }
+    return {
+      ...baseState,
+      ...varyState
+    }
   },
 
   render: function () {
@@ -49,6 +60,43 @@ const PNLAR = createReactClass({
       <ViroARScene>
         {this.allMarkers.map((marker) => (
           <ViroARImageMarker target={marker} onAnchorFound={() => this._onAnchorFound(marker)} pauseUpdates={this.state.pauseUpdates}>
+            <ViroNode scale={[0, 0, 0]} transformBehaviors={["billboard"]} animation={{ name: this.state.animName, run: this.state.playAnim, }}>
+              <ViroImage 
+                source={require('./res/thflag.jpg')}
+                width={0.15}
+                height={0.10}
+                position={[-.2, .25, 0]}
+                onClick={() => this._selectTh(marker)}
+                animation={{ name: "tapAnimation", run: this.state.tapTh, onFinish: this._animateFinished }}
+                shadowCastingBitMask={0} />
+
+              <ViroImage 
+                source={require('./res/thflag.jpg')}
+                width={0.15}
+                height={0.10}
+                position={[-.1, .25, 0]}
+                onClick={() => this._selectEn(marker)}
+                animation={{ name: "tapAnimation", run: this.state.tapEn, onFinish: this._animateFinished }}
+                shadowCastingBitMask={0} />
+
+              <ViroImage 
+                source={require('./res/thflag.jpg')}
+                width={0.15}
+                height={0.10}
+                position={[0, .25, 0]}
+                onClick={() => this._selectCh(marker)}
+                animation={{ name: "tapAnimation", run: this.state.tapCh, onFinish: this._animateFinished }}
+                shadowCastingBitMask={0} />
+
+              <ViroImage 
+                source={require('./res/thflag.jpg')}
+                width={0.15}
+                height={0.10}
+                position={[.1, .25, 0]}
+                onClick={() => this._selectJp(marker)}
+                animation={{ name: "tapAnimation", run: this.state.tapJp, onFinish: this._animateFinished }}
+                shadowCastingBitMask={0} />
+            </ViroNode>
             <ViroFlexView
               rotation={[-90, -90, 0]}
               transformBehaviors={["billboard"]}
@@ -62,8 +110,9 @@ const PNLAR = createReactClass({
               >
                 <ViroText
                   textClipMode="None"
-                  text={String(ARData[marker - 1].value[0].detail)}
+                  text={this.state.textLangDetail}
                   scale={ARData[marker - 1].scale}
+                  onClick={this._toggleButtons}
                   position={Array.from([
                     (parseFloat(ARData[marker - 1].textPosition[0]) + parseFloat(ARData[marker - 1].corePosition[0])),
                     (parseFloat(ARData[marker - 1].textPosition[1]) + parseFloat(ARData[marker - 1].corePosition[1])),
@@ -110,13 +159,55 @@ const PNLAR = createReactClass({
       this.setState(stateForSet);
     }
   },
+  _toggleButtons() {
+    this.setState({
+      animName: (this.state.animName == "scaleUp" ? "scaleDown" : "scaleUp"),
+      playAnim: true
+    })
+  },
+  _selectTh(marker) {
+    this.setState({
+      textLangTitle: String(ARData[marker - 1].value[0].title),
+      textLangDetail: String(ARData[marker - 1].value[0].detail),
+      tapTh: true
+    })
+  },
+  _selectEn(marker) {
+    this.setState({
+      textLangTitle: String(ARData[marker - 1].value[1].title),
+      textLangDetail: String(ARData[marker - 1].value[1].detail),
+      tapEn: true
+    })
+  },
+  _selectCh(marker) {
+    this.setState({
+      textLangTitle: String(ARData[marker - 1].value[2].title),
+      textLangDetail: String(ARData[marker - 1].value[2].detail),
+      tapCh: true
+    })
+  },
+  _selectJp(marker) {
+    this.setState({
+      textLangTitle: String(ARData[marker - 1].value[3].title),
+      textLangDetail: String(ARData[marker - 1].value[3].detail),
+      tapJp: true
+    })
+  },
+  _animateFinished() {
+    this.setState({
+      tapTh: false,
+      tapEn: false,
+      tapCh: false,
+      tapJp: false,
+    })
+  },
 });
 
 ViroMaterials.createMaterials({
   white: {
     shininess: 2.0,
     lightingModel: "PBR",
-  }
+  },
 });
 
 ViroARTrackingTargets.createTargets({
@@ -128,10 +219,27 @@ ViroARTrackingTargets.createTargets({
 });
 
 ViroAnimations.registerAnimations({
+  scaleUp: {
+    properties: { scaleX: 1, scaleY: 1, scaleZ: 1, },
+    duration: 500, easing: "bounce"
+  },
+  scaleDown: {
+    properties: { scaleX: 0, scaleY: 0, scaleZ: 0, },
+    duration: 200,
+  },
   scaleObject: {
     properties: { scaleX: .002, scaleY: .002, scaleZ: .002, },
     duration: 5000, easing: "bounce"
   },
+  scaleSphereUp: {
+    properties: { scaleX: .8, scaleY: .8, scaleZ: .8, },
+    duration: 50, easing: "easeineaseout"
+  },
+  scaleSphereDown: {
+    properties: { scaleX: 1, scaleY: 1, scaleZ: 1, },
+    duration: 50, easing: "easeineaseout"
+  },
+  tapAnimation: [["scaleSphereUp", "scaleSphereDown"],]
 });
 
 const styles = StyleSheet.create({
@@ -141,7 +249,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#ffffff',
     textAlignVertical: 'top',
-    textAlign: 'justify',
+    textAlign: 'left',
     fontWeight: 'bold',
   },
   card: {
