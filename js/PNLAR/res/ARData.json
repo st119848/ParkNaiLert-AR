@@ -66,7 +66,7 @@
     "orientation": "Left",
     "physicalWidth": 0.10,
     "corePosition": [0, 0, 0],
-    "textPosition": [0, 0, 0.3],
+    "textPosition": [0, 0, 0.4],
     "scale": [0.15, 0.15, 0.15],
     "value": [
         {
@@ -128,7 +128,7 @@
     "orientation": "Left",
     "physicalWidth": 0.05,
     "corePosition": [0, 0, 0],
-    "textPosition": [0, 0, 0.3],
+    "textPosition": [0, 0, 0.2],
     "scale": [0.15, 0.15, 0.15],
     "value": [
         {
