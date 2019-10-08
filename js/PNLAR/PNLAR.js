@@ -2,7 +2,8 @@
 
 import React, { Component } from 'react';
 import { StyleSheet, Text } from 'react-native';
-import ARData from './res/ARData.json';
+//import ARData from './res/ARData.json';
+import ARData from './res/ARData'
 
 import {
   ViroARScene,
@@ -29,12 +30,12 @@ const PNLAR = createReactClass({
 
   allMarkers: ["1"],
 
-  getInitialState() {
+  getInitialState(marker) {
     const baseState =
     {
       texture: 'white',
-      textLangTitle: "",
-      textLangDetail: "Tap to enable language selection",
+      textLangTitle: '',
+      textLangDetail: 'Tap to select the laguage',
       marker: "test",
       playAnim: false,
       animateObject: false,
@@ -58,41 +59,42 @@ const PNLAR = createReactClass({
 
     return (
       <ViroARScene>
-        {this.allMarkers.map((marker) => (
-          <ViroARImageMarker target={marker} onAnchorFound={() => this._onAnchorFound(marker)} pauseUpdates={this.state.pauseUpdates}>
+        {this.allMarkers.map((marker, index) => (
+          <ViroARImageMarker target={marker} onAnchorFound={() => this._onAnchorFound(marker)} key={index} pauseUpdates={this.state.pauseUpdates}>
+            
             <ViroNode scale={[0, 0, 0]} transformBehaviors={["billboard"]} animation={{ name: this.state.animName, run: this.state.playAnim, }}>
-              <ViroImage 
+              <ViroImage
                 source={require('./res/thflag.jpg')}
                 width={0.15}
                 height={0.10}
-                position={[-.2, .25, 0]}
+                position={[0.3, .1, 0]}
                 onClick={() => this._selectTh(marker)}
                 animation={{ name: "tapAnimation", run: this.state.tapTh, onFinish: this._animateFinished }}
                 shadowCastingBitMask={0} />
 
-              <ViroImage 
-                source={require('./res/thflag.jpg')}
+              <ViroImage
+                source={require('./res/usflag.png')}
                 width={0.15}
                 height={0.10}
-                position={[-.1, .25, 0]}
+                position={[0.3, 0, 0]}
                 onClick={() => this._selectEn(marker)}
                 animation={{ name: "tapAnimation", run: this.state.tapEn, onFinish: this._animateFinished }}
                 shadowCastingBitMask={0} />
 
-              <ViroImage 
-                source={require('./res/thflag.jpg')}
+              <ViroImage
+                source={require('./res/chflag.png')}
                 width={0.15}
                 height={0.10}
-                position={[0, .25, 0]}
+                position={[0.3, -0.1, 0]}
                 onClick={() => this._selectCh(marker)}
                 animation={{ name: "tapAnimation", run: this.state.tapCh, onFinish: this._animateFinished }}
                 shadowCastingBitMask={0} />
 
-              <ViroImage 
-                source={require('./res/thflag.jpg')}
+              <ViroImage
+                source={require('./res/jpflag.png')}
                 width={0.15}
                 height={0.10}
-                position={[.1, .25, 0]}
+                position={[0.3, -0.2, 0]}
                 onClick={() => this._selectJp(marker)}
                 animation={{ name: "tapAnimation", run: this.state.tapJp, onFinish: this._animateFinished }}
                 shadowCastingBitMask={0} />
@@ -100,27 +102,26 @@ const PNLAR = createReactClass({
             <ViroFlexView
               rotation={[-90, -90, 0]}
               transformBehaviors={["billboard"]}
-              style={styles.card}
+              style={{flex:1}}
               visible={this.state["isShow" + marker]}
-              height={0.3}
-              width={0.5}
+              height={3}
+              width={1.5}
             >
-              <ViroFlexView
-                style={styles.cardWrapper}
-              >
-                <ViroText
-                  textClipMode="None"
-                  text={this.state.textLangDetail}
-                  scale={ARData[marker - 1].scale}
-                  onClick={this._toggleButtons}
-                  position={Array.from([
-                    (parseFloat(ARData[marker - 1].textPosition[0]) + parseFloat(ARData[marker - 1].corePosition[0])),
-                    (parseFloat(ARData[marker - 1].textPosition[1]) + parseFloat(ARData[marker - 1].corePosition[1])),
-                    (parseFloat(ARData[marker - 1].textPosition[2]) + parseFloat(ARData[marker - 1].corePosition[2]))
-                  ])}
-                  style={styles.textStyle}
-                />
-              </ViroFlexView>
+              <ViroText
+                //textClipMode="None"
+                width={1}
+                height={1}
+                text={this.state.textLangDetail}
+                scale={ARData[marker - 1].scale}
+                onClick={this._toggleButtons}
+                extrusionDepth={0.1}
+                position={Array.from([
+                  (parseFloat(ARData[marker - 1].textPosition[0]) + parseFloat(ARData[marker - 1].corePosition[0])),
+                  (parseFloat(ARData[marker - 1].textPosition[1]) + parseFloat(ARData[marker - 1].corePosition[1])),
+                  (parseFloat(ARData[marker - 1].textPosition[2]) + parseFloat(ARData[marker - 1].corePosition[2]))
+                ])}
+                style={styles.textStyle}
+              />
             </ViroFlexView>
             <ViroSpotLight
               innerAngle={5}
@@ -244,7 +245,6 @@ ViroAnimations.registerAnimations({
 
 const styles = StyleSheet.create({
   textStyle: {
-    flex: .5,
     fontFamily: "Thonburi, Pingfang HK",
     fontSize: 20,
     color: '#ffffff',
@@ -254,12 +254,6 @@ const styles = StyleSheet.create({
   },
   card: {
     flexDirection: 'column'
-  },
-  cardWrapper: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    padding: 0.001,
-    flex: .5
   }
 });
 
