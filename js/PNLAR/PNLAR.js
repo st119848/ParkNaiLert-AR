@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
-import { StyleSheet, Text, View  } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import ARData from './res/ARData.json';
 
 import {
@@ -24,6 +24,8 @@ import {
 } from 'react-viro';
 
 const createReactClass = require('create-react-class');
+
+export const Testing = 'Hi world';
 
 const PNLAR = createReactClass({
 
@@ -57,10 +59,10 @@ const PNLAR = createReactClass({
   render: function () {
 
     return (
-      
-      <ViroARScene>
 
+      <ViroARScene>
         {this.allMarkers.map((marker, index) => (
+
           <ViroARImageMarker target={marker} onAnchorFound={() => this._onAnchorFound(marker)} key={index} pauseUpdates={this.state.pauseUpdates}>
 
             <ViroNode scale={[0, 0, 0]} transformBehaviors={["billboard"]} animation={{ name: this.state.animName, run: this.state.playAnim, }}>
@@ -124,8 +126,10 @@ const PNLAR = createReactClass({
                   ])}
                   style={styles.textStyle}
                 />
+
               </ViroFlexView>
             </ViroFlexView>
+
             <ViroSpotLight
               innerAngle={5}
               outerAngle={25}
@@ -140,9 +144,10 @@ const PNLAR = createReactClass({
             />
 
           </ViroARImageMarker>
-        ))}
 
+        ))}
       </ViroARScene>
+
     );
   },
   _onAnchorFound(marker) {
@@ -252,7 +257,6 @@ const styles = StyleSheet.create({
     fontFamily: "Rosemary, Thonburi, Pingfang HK",
     fontSize: 20,
     color: '#ffffff',
-    lineHeight: 20,
     textAlignVertical: 'top',
     textAlign: 'left',
     fontWeight: 'bold',
@@ -269,4 +273,4 @@ const styles = StyleSheet.create({
   }
 });
 
-module.exports = PNLAR;
+export default PNLAR;
