@@ -59,8 +59,8 @@ const PNLAR = createReactClass({
   render: function () {
 
     return (
-
       <ViroARScene>
+
         {this.allMarkers.map((marker, index) => (
 
           <ViroARImageMarker target={marker} onAnchorFound={() => this._onAnchorFound(marker)} key={index} pauseUpdates={this.state.pauseUpdates}>
@@ -126,7 +126,6 @@ const PNLAR = createReactClass({
                   ])}
                   style={styles.textStyle}
                 />
-
               </ViroFlexView>
             </ViroFlexView>
 
@@ -257,6 +256,7 @@ const styles = StyleSheet.create({
     fontFamily: "Rosemary, Thonburi, Pingfang HK",
     fontSize: 20,
     color: '#ffffff',
+    lineHeight: 20,
     textAlignVertical: 'top',
     textAlign: 'left',
     fontWeight: 'bold',
