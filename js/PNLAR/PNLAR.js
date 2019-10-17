@@ -1,9 +1,8 @@
 'use strict';
 
 import React, { Component } from 'react';
-import { StyleSheet, Text } from 'react-native';
-//import ARData from './res/ARData.json';
-import ARData from './res/ARData'
+import { StyleSheet, Text, View  } from 'react-native';
+import ARData from './res/ARData.json';
 
 import {
   ViroARScene,
@@ -58,10 +57,12 @@ const PNLAR = createReactClass({
   render: function () {
 
     return (
+      
       <ViroARScene>
+
         {this.allMarkers.map((marker, index) => (
           <ViroARImageMarker target={marker} onAnchorFound={() => this._onAnchorFound(marker)} key={index} pauseUpdates={this.state.pauseUpdates}>
-            
+
             <ViroNode scale={[0, 0, 0]} transformBehaviors={["billboard"]} animation={{ name: this.state.animName, run: this.state.playAnim, }}>
               <ViroImage
                 source={require('./res/thflag.jpg')}
@@ -102,26 +103,28 @@ const PNLAR = createReactClass({
             <ViroFlexView
               rotation={[-90, -90, 0]}
               transformBehaviors={["billboard"]}
-              style={{flex:1}}
+              style={{ flex: 1 }}
               visible={this.state["isShow" + marker]}
               height={3}
               width={1.5}
             >
-              <ViroText
-                //textClipMode="None"
-                width={1}
-                height={1}
-                text={this.state.textLangDetail}
-                scale={ARData[marker - 1].scale}
-                onClick={this._toggleButtons}
-                extrusionDepth={0.1}
-                position={Array.from([
-                  (parseFloat(ARData[marker - 1].textPosition[0]) + parseFloat(ARData[marker - 1].corePosition[0])),
-                  (parseFloat(ARData[marker - 1].textPosition[1]) + parseFloat(ARData[marker - 1].corePosition[1])),
-                  (parseFloat(ARData[marker - 1].textPosition[2]) + parseFloat(ARData[marker - 1].corePosition[2]))
-                ])}
-                style={styles.textStyle}
-              />
+              <ViroFlexView
+                style={styles.cardWrapper}
+              >
+                <ViroText
+                  //textClipMode="None"
+                  text={this.state.textLangDetail}
+                  scale={ARData[marker - 1].scale}
+                  onClick={this._toggleButtons}
+                  extrusionDepth={0.1}
+                  position={Array.from([
+                    (parseFloat(ARData[marker - 1].textPosition[0]) + parseFloat(ARData[marker - 1].corePosition[0])),
+                    (parseFloat(ARData[marker - 1].textPosition[1]) + parseFloat(ARData[marker - 1].corePosition[1])),
+                    (parseFloat(ARData[marker - 1].textPosition[2]) + parseFloat(ARData[marker - 1].corePosition[2]))
+                  ])}
+                  style={styles.textStyle}
+                />
+              </ViroFlexView>
             </ViroFlexView>
             <ViroSpotLight
               innerAngle={5}
@@ -245,15 +248,24 @@ ViroAnimations.registerAnimations({
 
 const styles = StyleSheet.create({
   textStyle: {
-    fontFamily: "Thonburi, Pingfang HK",
+    flex: .5,
+    fontFamily: "Rosemary, Thonburi, Pingfang HK",
     fontSize: 20,
     color: '#ffffff',
+    lineHeight: 20,
     textAlignVertical: 'top',
     textAlign: 'left',
     fontWeight: 'bold',
+    includeFontPadding: false
   },
   card: {
     flexDirection: 'column'
+  },
+  cardWrapper: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    padding: 0.001,
+    flex: .5
   }
 });
 

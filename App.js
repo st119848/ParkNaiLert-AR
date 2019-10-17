@@ -10,6 +10,7 @@
 'use strict';
 
 import React, { Component } from 'react';
+import { Image, ImageBackground, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import {
   AppRegistry,
@@ -27,22 +28,28 @@ var createReactClass = require('create-react-class');
 var apiKey = "185779F9-FAEC-4950-BF69-454D6BDD4EC6";
 
 var arScenes = {
-  'PNLAR' : require('./js/PNLAR/PNLAR.js'),
+  'PNLAR': require('./js/PNLAR/PNLAR.js'),
 }
 
 var showARScene = true;
 
 var ViroCodeSamplesSceneNavigator = createReactClass({
-  render: function() {
+  render: function () {
 
     if (showARScene) {
       return (
-        <ViroARSceneNavigator
-          initialScene={{
-            scene: arScenes['PNLAR'],
-          }}
-          apiKey={apiKey} />
-        );
+        <View style={{ flex: 1, backgroundColor: 'transparent' }}>
+          <Text>
+            Some text
+  </Text>
+
+          <ViroARSceneNavigator
+            initialScene={{
+              scene: arScenes['PNLAR'],
+            }}
+            apiKey={apiKey} />
+        </View>
+      );
     }
   }
 });
