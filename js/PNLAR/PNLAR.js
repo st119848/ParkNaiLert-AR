@@ -27,7 +27,7 @@ const createReactClass = require('create-react-class');
 
 const PNLAR = createReactClass({
 
-  allMarkers: ["1"],
+  allMarkers: ["10"],
 
   getInitialState(marker) {
     const baseState =
@@ -61,7 +61,7 @@ const PNLAR = createReactClass({
       <ViroARScene>
 
         {this.allMarkers.map((marker, index) => (
-          <ViroARImageMarker target={marker} onAnchorFound={() => this._onAnchorFound(marker)} key={index} pauseUpdates={this.state.pauseUpdates}>
+          <ViroARImageMarker target={marker} onAnchorFound={() => this.props.sceneNavigator.viroAppProps.onAnchored(marker)} key={index} pauseUpdates={this.state.pauseUpdates}>
 
             <ViroNode scale={[0, 0, 0]} transformBehaviors={["billboard"]} animation={{ name: this.state.animName, run: this.state.playAnim, }}>
               <ViroImage
@@ -215,7 +215,7 @@ ViroMaterials.createMaterials({
 });
 
 ViroARTrackingTargets.createTargets({
-  "1": {
+  "10": {
     source: require('./res/1.jpeg'),
     orientation: "Left",
     physicalWidth: ARData[0].physicalWidth // real world width in meters
