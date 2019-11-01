@@ -113,6 +113,13 @@ const styles = StyleSheet.create({
 
 });
 
+const styles = StyleSheet.create({
+  viewStyle: {
+    flex: 1,
+    backgroundColor: 'transparent'
+  }
+});
+
 // Uncomment the below line to use the ARDrivingCar Demo. Don't forget to set the apiKey variable in ARDrivingCar.js
 // ViroCodeSamplesSceneNavigator = require('./js/ARDrivingCarDemo/ARDrivingCar');
 

@@ -25,6 +25,8 @@ import {
 
 const createReactClass = require('create-react-class');
 
+export const Testing = 'Hi world';
+
 const PNLAR = createReactClass({
 
   allMarkers: ["10"],
@@ -126,6 +128,7 @@ const PNLAR = createReactClass({
                 />
               </ViroFlexView>
             </ViroFlexView>
+
             <ViroSpotLight
               innerAngle={5}
               outerAngle={25}
@@ -140,9 +143,10 @@ const PNLAR = createReactClass({
             />
 
           </ViroARImageMarker>
-        ))}
 
+        ))}
       </ViroARScene>
+
     );
   },
   _onAnchorFound(marker) {
@@ -269,4 +273,4 @@ const styles = StyleSheet.create({
   }
 });
 
-module.exports = PNLAR;
+export default PNLAR;
