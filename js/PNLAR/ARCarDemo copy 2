@@ -60,7 +60,7 @@ const PNLAR = createReactClass({
               rotation={[0, 0, -90]}
               visible={this.state["isShow" + marker]}
               animation={{ name: "scaleCar", run: this.state.animateCar, }} />
-            <ViroFlexView
+            {/* <ViroFlexView
               rotation={[-90, -90, 0]}
               transformBehaviors={["billboard"]}
               height={0.03}
@@ -79,7 +79,7 @@ const PNLAR = createReactClass({
                   style={styles.textStyle}
                 />
               </ViroFlexView>
-            </ViroFlexView>
+            </ViroFlexView> */}
             <ViroSpotLight
               innerAngle={5}
               outerAngle={25}

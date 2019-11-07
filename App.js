@@ -14,8 +14,6 @@ import { Image, ImageBackground, StatusBar, StyleSheet, Text, TouchableOpacity, 
 import SwipeUpDown from 'react-native-swipe-up-down';
 import PNLAR, { Testing } from './js/PNLAR/PNLAR';
 import ARData from './js/PNLAR/res/ARData.json';
-import { useSpring, animated } from 'react-spring';
-import ModelView from 'react-native-3d-model-view'
 
 import {
   AppRegistry,
@@ -52,17 +50,13 @@ var ViroCodeSamplesSceneNavigator = createReactClass({
   },
 
   render: function () {
-    let cameraPosition = {
-      x: 150,
-      y: 300,
-      z: 350
-    }
     if (showARScene) {
       return (
         <View style={styles.viewStyle}>
           <SwipeUpDown
-            itemMini={<Text>{this.state.textLangTitle}</Text>}// Pass props component when show full
-            itemFull={}// Pass props component when show full
+            itemMini={<Text style={styles.textStyle}>{this.state.textLangTitle}</Text>}// Pass props component when show full
+            itemFull={<Text style={styles.textStyle}>{this.state.textLangDetail}</Text>}// Pass props component when show full
+
             onShowMini={() => console.log('mini')}
             onShowFull={() => console.log('full')}
             onMoveDown={() => console.log('down')}
@@ -106,17 +100,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent'
   },
   textStyle: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    textAlign: 'justify',
-  },
-
-});
-
-const styles = StyleSheet.create({
-  viewStyle: {
-    flex: 1,
-    backgroundColor: 'transparent'
+    color: "#424242",
+    alignSelf: "flex-start",
+    fontSize: 20,
+    fontFamily: "Thonburi",
+    lineHeight: 30,
+    textAlign: "left"
   }
 });
 
