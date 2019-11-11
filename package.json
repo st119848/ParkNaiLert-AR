@@ -5,24 +5,17 @@
   "scripts": {
     "prestart": "./node_modules/react-viro/bin/run_ngrok.sh",
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
-    "postinstall": "jetifier -r"
+    "test": "jest"
   },
   "dependencies": {
     "react": "16.8.3",
     "react-native": "0.59.3",
-    "react-native-gesture-handler": "^1.5.0",
-    "react-native-reanimated": "^1.4.0",
-    "react-native-screens": "^1.0.0-alpha.23",
     "react-native-swipe-up-down": "^1.0.7",
-    "react-navigation": "^4.0.10",
-    "react-navigation-stack": "^1.10.3",
     "react-viro": "2.16.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
     "jest": "23.6.0",
-    "jetifier": "^1.6.4",
     "json-loader": "^0.5.7",
     "metro-react-native-babel-preset": "0.51.1",
     "react-test-renderer": "16.6.1"
