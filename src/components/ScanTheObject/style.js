@@ -1,6 +1,6 @@
-import StyleSheet from 'react-native'
+var React = require('react-native');
 
-export const styles = StyleSheet.create({
+var styles = React.StyleSheet.create({
 	viewStyle: {
 		flex: 1,
   },
@@ -16,3 +16,5 @@ export const styles = StyleSheet.create({
     paddingBottom: 30,
 	},
 });
+
+module.exports = styles;

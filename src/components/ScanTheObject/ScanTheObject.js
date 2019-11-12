@@ -6,16 +6,17 @@ import {
 	ImageBackground,
 	StatusBar,
 	Text,
+	StyleSheet,
 	TouchableOpacity,
 	View,
 	SegmentedControlIOS,
 } from "react-native";
 import SwipeUpDown from "react-native-swipe-up-down";
-import PNLAR, { Testing } from "./src/components/PNLAR/PNLAR";
-import ARData from "./assets/ARData.json";
+import PNLAR from "../PNLAR/PNLAR";
+import ARData from "../../../assets/ARData.json";
 import { AppRegistry } from "react-native";
 import { ViroARSceneNavigator } from "react-viro";
-import { styles } from "./style"
+import styles from "./style"
 
 var createReactClass = require("create-react-class");
 /*
@@ -50,11 +51,11 @@ var ScanTheObject = createReactClass({
 						apiKey={apiKey}
 						viroAppProps={{ onAnchored: this.onAnchored }}
 					/>
-            <View style={styles.viewBox}>
-              <Text style={styles.textStyle}>
-                  Scan The Object
-              </Text>
-            </View>
+						<View style={styles.viewBox}>
+						<Text style={styles.textStyle}>
+							Scan The Object
+						</Text>
+						</View>
 				</View>
 			);
 		}
