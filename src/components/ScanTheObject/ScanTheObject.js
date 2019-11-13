@@ -16,7 +16,8 @@ import PNLAR from "../PNLAR/PNLAR";
 import ARData from "../../../assets/ARData.json";
 import { AppRegistry } from "react-native";
 import { ViroARSceneNavigator } from "react-viro";
-import styles from "./style"
+import styles from "./style";
+import Header from '../Header/Header'
 
 var createReactClass = require("create-react-class");
 /*
@@ -46,15 +47,16 @@ var ScanTheObject = createReactClass({
 		if (showARScene) {
 			return (
 				<View style={styles.viewStyle}>
+					<Header/>
 					<ViroARSceneNavigator
-						initialScene={{ scene: PNLAR }}
+						inimitialScene={{ scene: PNLAR }}
 						apiKey={apiKey}
 						viroAppProps={{ onAnchored: this.onAnchored }}
 					/>
 						<View style={styles.viewBox}>
-						<Text style={styles.textStyle}>
-							Scan The Object
-						</Text>
+							<Text style={styles.textStyle}>
+								Scan The Object
+							</Text>
 						</View>
 				</View>
 			);

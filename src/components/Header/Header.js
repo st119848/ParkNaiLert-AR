@@ -1,24 +1,24 @@
-import React from 'react';
-import { Row , Column , Touch , View} from '../Style';
-import view from './style'
+import React from "react";
+import view from "./style";
+import { TouchableOpacity, View } from "react-native";
 
-export default class Header extends React.Component {
-    render() {
-		return (
+var createReactClass = require("create-react-class");
+
+var Header = createReactClass({
+	render: function() {
+        return (
             <View style={view.header}>
-                <Row>
-                    <Column width={"25%"} AlignItem="flex-start">
-                        <Touch onPress = {() => {}}>
-                            
-                        </Touch>
-                    </Column>
-                    <Column width={"25%"}  AlignItem="flex-end">
-                        <Touch onPress = {() => {}}>
-
-                        </Touch> 
-                    </Column>
-                </Row> 
+                <View style={view.row}>
+                    <View style={view.column} width={"25%"} AlignItem='flex-start'>
+                        <TouchableOpacity onPress={() => {}}></TouchableOpacity>
+                    </View>
+                    <View style={view.column} width={"25%"} AlignItem='flex-end'>
+                        <TouchableOpacity onPress={() => {}}></TouchableOpacity>
+                    </View>
+                </View>
             </View>
-		);
-	}
-}
+        )
+	},
+});
+
+module.exports = Header;

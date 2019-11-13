@@ -6,6 +6,13 @@ var view = React.StyleSheet.create({
         marginTop: 20,
         backgroundColor: "#707070"
     },
+    row: {
+        flexDirection: 'row'
+    },
+    column: {
+        flexDirection: 'column',
+        marginLeft: 'auto',
+    }
   });
 
   module.exports = view;

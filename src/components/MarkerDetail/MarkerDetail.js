@@ -25,10 +25,10 @@ var MarkerDetail = createReactClass({
 const styles = StyleSheet.create({
 	viewStyle: {
 		flex: 1,
-  },
-  viewBox: {
-   
-  },
+    },
+    viewBox: {
+    
+    },
 	textStyle: {
 	
 	},
