@@ -22,6 +22,7 @@ import {
 	ViroFlexView,
 	ViroARSceneNavigator,
 } from "react-viro";
+import MarkerDetail from '../MarkerDetail/MarkerDetail'
 
 const createReactClass = require("create-react-class");
 
@@ -60,8 +61,11 @@ const PNLAR = createReactClass({
 				{this.allMarkers.map((marker, index) => (
 					<ViroARImageMarker
 						target={marker}
-						onAnchorFound={() =>
-							this.props.sceneNavigator.viroAppProps.onAnchored(marker)
+						onAnchorFound={() => 
+							{
+								this.props.sceneNavigator.viroAppProps.onAnchored(marker)
+								this.props.sceneNavigator.push({scene:MarkerDetail});
+							}
 						}
 						key={index}
 						pauseUpdates={this.state.pauseUpdates}>

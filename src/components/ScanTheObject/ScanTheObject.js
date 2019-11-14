@@ -49,13 +49,14 @@ var ScanTheObject = createReactClass({
 				<View style={styles.viewStyle}>
 					<Header/>
 					<ViroARSceneNavigator
-						inimitialScene={{ scene: PNLAR }}
+						initialScene={{ scene: PNLAR }}
 						apiKey={apiKey}
 						viroAppProps={{ onAnchored: this.onAnchored }}
 					/>
 						<View style={styles.viewBox}>
 							<Text style={styles.textStyle}>
-								Scan The Object
+								{/* Scan The Object */}
+								{this.state.textLangTitle}
 							</Text>
 						</View>
 				</View>
@@ -67,7 +68,7 @@ var ScanTheObject = createReactClass({
 			textLangTitle: String(ARData[marker - 1].value[0].title),
 			textLangDetail: String(ARData[marker - 1].value[0].detail),
 			tapJp: true,
-		}); 
+		});
 	},
 });
 
