@@ -10,9 +10,7 @@ import {
 	TouchableOpacity,
 	View,
 	SegmentedControlIOS,
-} from "react-native";
-import SwipeUpDown from "react-native-swipe-up-down";
-import PNLAR from "../PNLAR/PNLAR";
+} from "react-native";import PNLAR from "../PNLAR/PNLAR";
 import ARData from "../../../assets/ARData.json";
 import { AppRegistry } from "react-native";
 import { ViroARSceneNavigator } from "react-viro";

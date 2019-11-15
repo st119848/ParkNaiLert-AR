@@ -64,7 +64,7 @@ const PNLAR = createReactClass({
 						onAnchorFound={() => 
 							{
 								this.props.sceneNavigator.viroAppProps.onAnchored(marker)
-								this.props.sceneNavigator.push({scene:MarkerDetail});
+								// this.props.sceneNavigator.push({scene:MarkerDetail});
 							}
 						}
 						key={index}
