@@ -1,22 +1,21 @@
 import React from "react";
-import view from "./style";
-import { TouchableOpacity, View } from "react-native";
+import {Container, Row, Column, Touch} from "./style"
 
 var createReactClass = require("create-react-class");
 
 var Header = createReactClass({
 	render: function() {
         return (
-            <View style={view.header}>
-                <View style={view.row}>
-                    <View style={view.column} width={"25%"} AlignItem='flex-start'>
-                        <TouchableOpacity onPress={() => {}}></TouchableOpacity>
-                    </View>
-                    <View style={view.column} width={"25%"} AlignItem='flex-end'>
-                        <TouchableOpacity onPress={() => {}}></TouchableOpacity>
-                    </View>
-                </View>
-            </View>
+            <Container>
+                <Row>
+                    <Column width={"25%"} AlignItem='flex-start'>
+                        <Touch onPress={() => {}}></Touch>
+                    </Column>
+                    <Column width={"25%"} AlignItem='flex-end'>
+                        <Touch onPress={() => {}}></Touch>
+                    </Column>
+                </Row>
+            </Container>
         )
 	},
 });

@@ -19,6 +19,8 @@ export const ThreeDBox = styled.View`
     width: 100%;
 `;
 
+export const Touch = styled.TouchableOpacity``;
+
 export const ThreeDText = styled.Text`
     font-size: 40px;
     font-family: Thonburi;

@@ -7,6 +7,7 @@ import { AppRegistry } from "react-native";
 import { ViroARSceneNavigator } from "react-viro";
 import Header from "../Header/Header";
 import MarkerDetail from "../MarkerDetail/MarkerDetail";
+import ModelView from "../3DModel/ModelView";
 
 var createReactClass = require("create-react-class");
 var apiKey = "185779F9-FAEC-4950-BF69-454D6BDD4EC6";
@@ -46,7 +47,7 @@ var ScanTheObject = createReactClass({
 				// 			</Text>
 				// 		</View>
 				// </View>
-				<MarkerDetail/>
+				<ModelView/>
 			);
 		}
 	},

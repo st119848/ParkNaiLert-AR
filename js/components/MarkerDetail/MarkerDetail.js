@@ -1,11 +1,8 @@
 "use strict";
 
 import React from "react";
-import {
-	ViroARScene,
-	ViroText
-} from "react-viro";
-import Header from '../Header/Header'
+import { ViroARScene, ViroText } from "react-viro";
+import Header from "../Header/Header";
 import {
 	Theme,
 	ImageBox,
@@ -16,38 +13,40 @@ import {
 	ThreeDText,
 	ThreeDBox,
 	Container,
-} from "../MarkerDetail/style";
+	Touch
+} from "./style";
 
 var createReactClass = require("create-react-class");
 
 var MarkerDetail = createReactClass({
-
 	render: function() {
-        return (
+		return (
 			<Theme>
 				<Header />
 				<Container>
 					<ImageBox>
-						<ImageStyle
-							source={require("../../../assets/1.jpeg")}
-						/>
+						<ImageStyle source={require("../../../assets/1.jpeg")} />
 					</ImageBox>
 					<ThreeDBox>
-						<ThreeDText>
-							3D Available >
-						</ThreeDText>
+						<Touch onPress={()=>{}}>
+							<ThreeDText>3D Available ></ThreeDText>	
+						</Touch>
 					</ThreeDBox>
 					<TextBox>
-						<TitleText>
-							Japanese Ceramic Dish Set
-						</TitleText>
+						<TitleText>Japanese Ceramic Dish Set</TitleText>
 						<DetailText>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+							enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore eu fugiat
+							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+							sunt in culpa qui officia deserunt mollit anim id est laborum.
 						</DetailText>
 					</TextBox>
 				</Container>
 			</Theme>
-        );
+		);
 	},
 });
 

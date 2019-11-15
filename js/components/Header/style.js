@@ -1,18 +1,18 @@
-var React = require('react-native');
+import styled from 'styled-components/native'
 
-var view = React.StyleSheet.create({
-    header: {
-        padding: 10,
-        marginTop: 20,
-        backgroundColor: "transparent"
-    },
-    row: {
-        flexDirection: 'row'
-    },
-    column: {
-        flexDirection: 'column',
-        marginLeft: 'auto',
-    }
-  });
+export const Container = styled.View`
+    padding: 10px;
+    margin-top: 20px;
+    background-color: transparent;
+`;
 
-  module.exports = view;
+export const Row = styled.View`
+    flex-direction: row;
+`;
+
+export const Column = styled.View`
+    flex-direction: column;
+    margin-left: auto;
+`;
+
+export const Touch = styled.TouchableOpacity``;
