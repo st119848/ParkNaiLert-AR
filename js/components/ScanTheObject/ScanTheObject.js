@@ -1,26 +1,14 @@
 "use strict";
 
 import React, { Component } from "react";
-import {
-	Image,
-	ImageBackground,
-	StatusBar,
-	Text,
-	StyleSheet,
-	TouchableOpacity,
-	View,
-	SegmentedControlIOS,
-} from "react-native";import PNLAR from "../PNLAR/PNLAR";
+import PNLAR from "../PNLAR/PNLAR";
 import ARData from "../../../assets/ARData.json";
 import { AppRegistry } from "react-native";
 import { ViroARSceneNavigator } from "react-viro";
-import styles from "./style";
-import Header from '../Header/Header'
+import Header from "../Header/Header";
+import MarkerDetail from "../MarkerDetail/MarkerDetail";
 
 var createReactClass = require("create-react-class");
-/*
- * TODO: Add your API key below!!
- */
 var apiKey = "185779F9-FAEC-4950-BF69-454D6BDD4EC6";
 /*
 var arScenes = {
@@ -44,20 +32,21 @@ var ScanTheObject = createReactClass({
 	render: function() {
 		if (showARScene) {
 			return (
-				<View style={styles.viewStyle}>
-					<Header/>
-					<ViroARSceneNavigator
-						initialScene={{ scene: PNLAR }}
-						apiKey={apiKey}
-						viroAppProps={{ onAnchored: this.onAnchored }}
-					/>
-						<View style={styles.viewBox}>
-							<Text style={styles.textStyle}>
-								{/* Scan The Object */}
-								{this.state.textLangTitle}
-							</Text>
-						</View>
-				</View>
+				// <View style={styles.viewStyle}>
+				// 	<Header/>
+				// 	<ViroARSceneNavigator
+				// 		initialScene={{ scene: PNLAR }}
+				// 		apiKey={apiKey}
+				// 		viroAppProps={{ onAnchored: this.onAnchored }}
+				// 	/>
+				// 		<View style={styles.viewBox}>
+				// 			<Text style={styles.textStyle}>
+				// 				{/* Scan The Object */}
+				// 				{this.state.textLangTitle}
+				// 			</Text>
+				// 		</View>
+				// </View>
+				<MarkerDetail/>
 			);
 		}
 	},
