@@ -15,6 +15,7 @@ import {
 	Container,
 	Touch
 } from "./style";
+import { Actions } from 'react-native-router-flux';
 
 var createReactClass = require("create-react-class");
 
@@ -28,7 +29,7 @@ var MarkerDetail = createReactClass({
 						<ImageStyle source={require("../../../assets/1.jpeg")} />
 					</ImageBox>
 					<ThreeDBox>
-						<Touch onPress={()=>{}}>
+						<Touch onPress={()=>{Actions.model()}}>
 							<ThreeDText>3D Available ></ThreeDText>	
 						</Touch>
 					</ThreeDBox>

@@ -1,15 +1,20 @@
 import React, { Fragment } from "react";
 import { View, Text } from "react-native";
 import ScanTheObject from "./js/components/ScanTheObject/ScanTheObject"
+import MarkerDetail from "./js/components/MarkerDetail/MarkerDetail";
+import ModelView from "./js/components/3DModel/ModelView";
+import Header from "./js/components/Header/Header"
+import {Router, Stack, Scene} from "react-native-router-flux"
 // import createAppContainer from "react-navigation";
 // import createStackNavigator from "react-navigation-stack";
 
 const App = () => (
 	<Router>
-	  <Stack key="root">
-		<Scene key="login" component={Login} title="Login"/>
-		<Scene key="register" component={Register} title="Register"/>
-		<Scene key="home" component={Home}/>
+	  <Stack hideNavBar>
+		<Scene key="scan" initial component={ScanTheObject}/>
+		<Scene key="detail" component={MarkerDetail}/>
+		<Scene key="model" component={ModelView}/>
+		<Scene key="header" component={Header}/>
 	  </Stack>
 	</Router>
 );

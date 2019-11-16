@@ -6,6 +6,7 @@ export const Theme = styled.View`
 `;
 
 export const BottomText = styled.Text`
+	background-color: black
 	color: white;
 	font-size: 35px;
 	font-family: Thonburi;

@@ -3,6 +3,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import ARData from "../../../assets/ARData.json";
+import { Actions } from 'react-native-router-flux';
 
 import {
 	ViroARScene,
@@ -64,7 +65,7 @@ const PNLAR = createReactClass({
 						onAnchorFound={() => 
 							{
 								this.props.sceneNavigator.viroAppProps.onAnchored(marker)
-								// this.props.sceneNavigator.push({scene:MarkerDetail});
+								Actions.detail();
 							}
 						}
 						key={index}
