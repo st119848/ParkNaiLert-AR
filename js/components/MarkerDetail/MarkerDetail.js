@@ -22,7 +22,7 @@ var MarkerDetail = createReactClass({
 	render: function() {
 		return (
 			<Theme>
-				<Header />
+				<Header source={require("../../../assets/white-cross.png")}/>
 				<Container>
 					<ImageBox>
 						<ImageStyle source={require("../../../assets/1.jpeg")} />

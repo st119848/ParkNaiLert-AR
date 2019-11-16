@@ -1,20 +1,17 @@
-var React = require('react-native');
+import styled from 'styled-components/native'
 
-var styles = React.StyleSheet.create({
-	viewStyle: {
-		flex: 1,
-  },
-  viewBox: {
-    backgroundColor: "black",
-  },
-	textStyle: {
-		color: "white",
-		fontSize: 35,
-		fontFamily: "Thonburi",
-		lineHeight: 39,
-    textAlign: "center",
-    paddingBottom: 30,
-	},
-});
+export const Theme = styled.View`
+	flex: 1;
+	background-color: white;
+`;
 
-module.exports = styles;
+export const BottomText = styled.Text`
+	color: white;
+	font-size: 35px;
+	font-family: Thonburi;
+	line-height: 39px;
+	text-align: center;
+	padding-bottom: 30;
+`;
+
+export const Touch = styled.TouchableOpacity``;

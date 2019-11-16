@@ -3,11 +3,11 @@
 import React, { Component } from "react";
 import PNLAR from "../PNLAR/PNLAR";
 import ARData from "../../../assets/ARData.json";
-import { AppRegistry } from "react-native";
 import { ViroARSceneNavigator } from "react-viro";
 import Header from "../Header/Header";
 import MarkerDetail from "../MarkerDetail/MarkerDetail";
 import ModelView from "../3DModel/ModelView";
+import { Container, Theme, BottomText } from "./style";
 
 var createReactClass = require("create-react-class");
 var apiKey = "185779F9-FAEC-4950-BF69-454D6BDD4EC6";
@@ -33,21 +33,18 @@ var ScanTheObject = createReactClass({
 	render: function() {
 		if (showARScene) {
 			return (
-				// <View style={styles.viewStyle}>
-				// 	<Header/>
-				// 	<ViroARSceneNavigator
-				// 		initialScene={{ scene: PNLAR }}
-				// 		apiKey={apiKey}
-				// 		viroAppProps={{ onAnchored: this.onAnchored }}
-				// 	/>
-				// 		<View style={styles.viewBox}>
-				// 			<Text style={styles.textStyle}>
-				// 				{/* Scan The Object */}
-				// 				{this.state.textLangTitle}
-				// 			</Text>
-				// 		</View>
-				// </View>
-				<MarkerDetail/>
+				<Theme>
+					<Header source={require("../../../assets/black-cross.png")}/>
+					<ViroARSceneNavigator
+						initialScene={{ scene: PNLAR }}
+						apiKey={apiKey}
+						viroAppProps={{ onAnchored: this.onAnchored }}
+					/>
+					<BottomText>
+						{/* Scan The Object */}
+						{this.state.textLangTitle}
+					</BottomText>
+				</Theme>
 			);
 		}
 	},

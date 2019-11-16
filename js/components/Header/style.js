@@ -21,13 +21,12 @@ export const BackArrow = styled.View`
 `;
 
 export const CloseArrow = styled.Image`
-    width: 75px;
-    height: 75px;
+    width: 70px;
+    height: 70px;
 `;
 
 export const Column = styled.View`
     justify-content: center;
 `;
-// align-items: ${props => props.AlignItem == undefined ? 'center' : props.AlignItem};
 
 export const Touch = styled.TouchableOpacity``;

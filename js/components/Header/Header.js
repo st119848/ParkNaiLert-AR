@@ -17,7 +17,7 @@ var Header = createReactClass({
                     </Column>
                     <Column>
                         <Touch onPress={() => {}}>
-                            <CloseArrow source={require("../../../assets/cross.png")}/>
+                            <CloseArrow source={this.props.source}/>
                         </Touch>
                     </Column>
                 </Row>

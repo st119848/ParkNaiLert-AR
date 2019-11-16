@@ -4,15 +4,27 @@ import ScanTheObject from "./js/components/ScanTheObject/ScanTheObject"
 // import createAppContainer from "react-navigation";
 // import createStackNavigator from "react-navigation-stack";
 
-export default class App extends React.Component {
-	render() {
-	  return (
-		<Fragment>
-			<ScanTheObject/>
-		</Fragment>
-	  );
-	}
-}
+const App = () => (
+	<Router>
+	  <Stack key="root">
+		<Scene key="login" component={Login} title="Login"/>
+		<Scene key="register" component={Register} title="Register"/>
+		<Scene key="home" component={Home}/>
+	  </Stack>
+	</Router>
+);
+
+export default App;
+
+// export default class App extends React.Component {
+// 	render() {
+// 	  return (
+// 		<Fragment>
+// 			<ScanTheObject/>
+// 		</Fragment>
+// 	  );
+// 	}
+// }
 
 // class initialApp extends React.Component {
 // 	render() {
