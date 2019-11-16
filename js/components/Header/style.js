@@ -1,7 +1,7 @@
 import styled from 'styled-components/native'
 
 export const Container = styled.View`
-    padding: 35px 10px 22px 20px;
+    padding: 10px 0 0 20px;
     background-color: transparent;
 `;
 
@@ -21,8 +21,8 @@ export const BackArrow = styled.View`
 `;
 
 export const CloseArrow = styled.Image`
-    width: 35px;
-    height: 35px;
+    width: 75px;
+    height: 75px;
 `;
 
 export const Column = styled.View`

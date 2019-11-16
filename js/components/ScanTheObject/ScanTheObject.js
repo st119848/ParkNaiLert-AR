@@ -47,7 +47,7 @@ var ScanTheObject = createReactClass({
 				// 			</Text>
 				// 		</View>
 				// </View>
-				<ModelView/>
+				<MarkerDetail/>
 			);
 		}
 	},
