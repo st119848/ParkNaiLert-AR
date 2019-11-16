@@ -1,6 +1,8 @@
-import React, { Fragment } from 'react';
-import ScanTheObject from './js/components/ScanTheObject/ScanTheObject';
-import MarkerDetail from './js/components/MarkerDetail/MarkerDetail';
+import React, { Fragment } from "react";
+import { View, Text } from "react-native";
+import ScanTheObject from "./js/components/ScanTheObject/ScanTheObject"
+// import createAppContainer from "react-navigation";
+// import createStackNavigator from "react-navigation-stack";
 
 export default class App extends React.Component {
 	render() {
@@ -10,29 +12,28 @@ export default class App extends React.Component {
 		</Fragment>
 	  );
 	}
-  }
+}
 
 // class initialApp extends React.Component {
 // 	render() {
-// 	  return (
-// 		<Fragment>
-// 			<ScanTheObject/>
-// 		</Fragment>
-// 	  );
+// 		return (
+// 			<View>
+// 				<Text>hello world</Text>
+// 			</View>
+// 		);
 // 	}
-//   }
+// }
 
-//   const AppNavigator = createStackNavigator({
-// 	Home: initialApp,
-// 	Details: MarkerDetail,
-//   });
+// const AppNavigator = createStackNavigator(
+// 	{
+// 		Home: initialApp
+// 	},
+// );
 
-//   const AppContainer = createAppContainer(AppNavigator);
+// export const AppContainer = createAppContainer(AppNavigator);
 
 // export default class App extends React.Component {
 // 	render() {
-// 	  return <AppContainer />;
+// 		return <AppContainer />;
 // 	}
-//   }
-
-// module.exports = App
+// }

@@ -13,7 +13,7 @@ import {
 	ArrowRight,
 	ArrowLeft,
 	HandBox,
-	Span,
+	Row,
 } from "./style";
 
 var createReactClass = require("create-react-class");
@@ -22,13 +22,13 @@ var MarkerDetail = createReactClass({
 	render: function() {
 		return (
 			<Theme>
-				<Header />
+				<Header renderBackArrow={true}/>
 				<Container>
 					<HandBox>
 						<ArrowUp
 							source={require("../../../assets/hand_images/arrow-up.png")}
 						/>
-						<Span>
+						<Row>
 							<ArrowLeft
 								source={require("../../../assets/hand_images/arrow-left.png")}
 							/>
@@ -38,7 +38,7 @@ var MarkerDetail = createReactClass({
 							<ArrowRight
 								source={require("../../../assets/hand_images/arrow-right.png")}
 							/>
-						</Span>
+						</Row>
 						<ArrowDown
 							source={require("../../../assets/hand_images/arrow-down.png")}
 						/>

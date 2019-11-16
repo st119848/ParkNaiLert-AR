@@ -21,7 +21,7 @@ export const HandImage = styled.Image`
     margin: 12px;
 `;
 
-export const Span = styled.View`
+export const Row = styled.View`
     flex-direction: row;
     justify-content: center;
     align-items: center;

@@ -6,7 +6,7 @@ export const Theme = styled.View`
 `;
 
 export const Container = styled.View`
-	padding: 20px 28px 20px 28px;
+	padding: 0 28px 20px 28px;
     align-items: center;
 `;
 

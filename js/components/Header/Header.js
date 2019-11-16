@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, Row, Column, Touch} from "./style"
+import {Container, Row, Column, Touch, BackArrow, CloseArrow} from "./style"
 
 var createReactClass = require("create-react-class");
 
@@ -8,11 +8,17 @@ var Header = createReactClass({
         return (
             <Container>
                 <Row>
-                    <Column width={"25%"} AlignItem='flex-start'>
-                        <Touch onPress={() => {}}></Touch>
+                    <Column>
+                        { this.props.renderBackArrow === true && 
+                            <Touch onPress={() => {}}>
+                                <BackArrow/>
+                            </Touch>
+                        }
                     </Column>
-                    <Column width={"25%"} AlignItem='flex-end'>
-                        <Touch onPress={() => {}}></Touch>
+                    <Column>
+                        <Touch onPress={() => {}}>
+                            <CloseArrow source={require("../../../assets/cross.png")}/>
+                        </Touch>
                     </Column>
                 </Row>
             </Container>
