@@ -8,7 +8,6 @@ import Header from "../Header/Header";
 import MarkerDetail from "../MarkerDetail/MarkerDetail";
 import ModelView from "../3DModel/ModelView";
 import { Theme, BottomText, Border } from "./style";
-import { Actions } from 'react-native-router-flux';
 
 var createReactClass = require("create-react-class");
 var apiKey = "185779F9-FAEC-4950-BF69-454D6BDD4EC6";
@@ -44,10 +43,10 @@ var ScanTheObject = createReactClass({
 						/>
 						<BottomText>
 							Scan The Object
+							{/* {this.state.textLangTitle} */}
 						</BottomText>
 					</Border>
 				</Theme>
-				// <ModelView/>
 			);
 		}
 	},

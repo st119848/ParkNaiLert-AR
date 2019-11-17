@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import ARData from "../../../assets/ARData.json";
-import { Actions } from 'react-native-router-flux';
+import { Actions } from "react-native-router-flux";
 
 import {
 	ViroARScene,
@@ -15,6 +15,7 @@ import {
 	ViroLightingEnvironment,
 	ViroARImageMarker,
 	ViroARTrackingTargets,
+	ViroBox,
 	ViroSphere,
 	ViroSpotLight,
 	ViroQuad,
@@ -22,8 +23,10 @@ import {
 	ViroConstants,
 	ViroFlexView,
 	ViroARSceneNavigator,
+	ViroAmbientLight,
 } from "react-viro";
-import MarkerDetail from '../MarkerDetail/MarkerDetail'
+import MarkerDetail from "../MarkerDetail/MarkerDetail";
+import ObjectScene from "./ObjectScene";
 
 const createReactClass = require("create-react-class");
 
@@ -65,7 +68,9 @@ const PNLAR = createReactClass({
 						onAnchorFound={() => 
 							{
 								this.props.sceneNavigator.viroAppProps.onAnchored(marker)
-								Actions.detail({renderText: true});
+								this.props.sceneNavigator.push({scene:ObjectScene});
+								// to navigate to detail component
+								// Actions.detail({renderText: true});
 							}
 						}
 						key={index}

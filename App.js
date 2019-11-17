@@ -5,8 +5,6 @@ import MarkerDetail from "./js/components/MarkerDetail/MarkerDetail";
 import ModelView from "./js/components/3DModel/ModelView";
 import Header from "./js/components/Header/Header"
 import {Router, Stack, Scene} from "react-native-router-flux"
-// import createAppContainer from "react-navigation";
-// import createStackNavigator from "react-navigation-stack";
 
 const App = () => (
 	<Router>
@@ -21,36 +19,3 @@ const App = () => (
 
 export default App;
 
-// export default class App extends React.Component {
-// 	render() {
-// 	  return (
-// 		<Fragment>
-// 			<ScanTheObject/>
-// 		</Fragment>
-// 	  );
-// 	}
-// }
-
-// class initialApp extends React.Component {
-// 	render() {
-// 		return (
-// 			<View>
-// 				<Text>hello world</Text>
-// 			</View>
-// 		);
-// 	}
-// }
-
-// const AppNavigator = createStackNavigator(
-// 	{
-// 		Home: initialApp
-// 	},
-// );
-
-// export const AppContainer = createAppContainer(AppNavigator);
-
-// export default class App extends React.Component {
-// 	render() {
-// 		return <AppContainer />;
-// 	}
-// }

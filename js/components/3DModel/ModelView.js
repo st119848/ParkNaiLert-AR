@@ -23,13 +23,11 @@ var MarkerDetail = createReactClass({
 	render: function() {
 		return (
 			<Theme>
-				<Header source={require("../../../assets/white-cross.png")} renderBackArrow={true}/>
+				<Header
+					source={require("../../../assets/white-cross.png")}
+					renderBackArrow={true}
+				/>
 				<Container>
-				<Viro3DObject source={{uri:"http://example.org/myobject.obj"}}
-          		position={[-0.0, -5.5, -1.15]}
-          		materials={["heart"]}
-          		type="OBJ" />
-
 					<HandBox>
 						<ArrowUp
 							source={require("../../../assets/hand_images/arrow-up.png")}
