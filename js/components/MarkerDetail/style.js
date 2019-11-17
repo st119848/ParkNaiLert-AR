@@ -15,7 +15,7 @@ export const ThreeDBox = styled.View`
     border-top-color: white;
     border-bottom-width: 1px;
     border-bottom-color: white;
-    margin: 38px 0 27px 0;
+    margin: 38px 0 0 0;
     width: 100%;
 `;
 
@@ -41,7 +41,7 @@ export const ImageStyle = styled.Image`
 `;
 
 export const TextBox = styled.View`
-    padding: 0 13px;
+    padding: 27px 13px 0 13px;
 `;
 
 export const TitleText = styled.Text`
