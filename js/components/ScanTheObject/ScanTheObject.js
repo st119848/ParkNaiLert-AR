@@ -7,7 +7,7 @@ import { ViroARSceneNavigator } from "react-viro";
 import Header from "../Header/Header";
 import MarkerDetail from "../MarkerDetail/MarkerDetail";
 import ModelView from "../3DModel/ModelView";
-import { Container, Theme, BottomText } from "./style";
+import { Theme, BottomText, Border } from "./style";
 import { Actions } from 'react-native-router-flux';
 
 var createReactClass = require("create-react-class");
@@ -36,14 +36,16 @@ var ScanTheObject = createReactClass({
 			return (
 				<Theme>
 					<Header source={require("../../../assets/black-cross.png")}/>
-					<ViroARSceneNavigator
-						initialScene={{ scene: PNLAR }}
-						apiKey={apiKey}
-						viroAppProps={{ onAnchored: this.onAnchored }}
-					/>
-					<BottomText>
-						Scan The Object
-					</BottomText>
+					<Border>
+						<ViroARSceneNavigator
+							initialScene={{ scene: PNLAR }}
+							apiKey={apiKey}
+							viroAppProps={{ onAnchored: this.onAnchored }}
+						/>
+						<BottomText>
+							Scan The Object
+						</BottomText>
+					</Border>
 				</Theme>
 			);
 		}

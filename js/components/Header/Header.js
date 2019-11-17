@@ -11,7 +11,7 @@ var Header = createReactClass({
                 <Row>
                     <Column>
                         { this.props.renderBackArrow === true && 
-                            <Touch onPress={() => Actions.pop}>
+                            <Touch onPress={() => Actions.pop()}>
                                 <BackArrow/>
                             </Touch>
                         }

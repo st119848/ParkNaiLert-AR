@@ -5,8 +5,13 @@ export const Theme = styled.View`
 	background-color: white;
 `;
 
+export const Border = styled.View`
+	flex: 1;
+	padding: 0 20px 20px 20px;
+`;
+
 export const BottomText = styled.Text`
-	background-color: black
+	background-color: black;
 	color: white;
 	font-size: 35px;
 	font-family: Thonburi;
