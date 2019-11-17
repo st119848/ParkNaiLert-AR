@@ -15,6 +15,7 @@ import {
 	HandBox,
 	Row,
 } from "./style";
+import { Viro3DObject } from "react-viro";
 
 var createReactClass = require("create-react-class");
 
@@ -24,6 +25,11 @@ var MarkerDetail = createReactClass({
 			<Theme>
 				<Header source={require("../../../assets/white-cross.png")} renderBackArrow={true}/>
 				<Container>
+				<Viro3DObject source={{uri:"http://example.org/myobject.obj"}}
+          		position={[-0.0, -5.5, -1.15]}
+          		materials={["heart"]}
+          		type="OBJ" />
+
 					<HandBox>
 						<ArrowUp
 							source={require("../../../assets/hand_images/arrow-up.png")}

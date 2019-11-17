@@ -28,12 +28,12 @@ var MarkerDetail = createReactClass({
 					<ImageBox>
 						<ImageStyle source={require("../../../assets/1.jpeg")} />
 					</ImageBox>
-					{ this.props.renderText === undefined && 
-					<ThreeDBox>
-						<Touch onPress={()=>{Actions.model()}}>
-							<ThreeDText>3D Available ></ThreeDText>	
-						</Touch>
-					</ThreeDBox>
+					{ this.props.renderText === true && 
+						<ThreeDBox>
+							<Touch onPress={()=>{Actions.model()}}>
+								<ThreeDText>3D Available ></ThreeDText>	
+							</Touch>
+						</ThreeDBox>
 					}
 					<TextBox>
 						<TitleText>Japanese Ceramic Dish Set</TitleText>

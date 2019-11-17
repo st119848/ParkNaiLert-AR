@@ -47,6 +47,7 @@ var ScanTheObject = createReactClass({
 						</BottomText>
 					</Border>
 				</Theme>
+				// <ModelView/>
 			);
 		}
 	},
