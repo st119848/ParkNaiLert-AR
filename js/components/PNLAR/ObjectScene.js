@@ -32,7 +32,7 @@ const ObjectScene = createReactClass({
 				<ViroAmbientLight color='#ffffff' intensity={200} />
 				<Viro3DObject
 					source={require("../../../assets/3D/jar.obj")}
-					position={[0, 1.45, 0]}
+					position={[0.0, 0.0, 20]}
 					scale={[0.9, 0.9, 0.9]}
 					type='OBJ'
 				/>
