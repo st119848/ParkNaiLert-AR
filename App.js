@@ -14,6 +14,7 @@ import { Image, ImageBackground, StatusBar, StyleSheet, Text, TouchableOpacity, 
 import SwipeUpDown from 'react-native-swipe-up-down';
 import PNLAR, { Testing } from './js/PNLAR/PNLAR';
 import ARData from './js/PNLAR/res/ARData.json';
+import ModelView from 'react-native-3d-model-view'
 
 import {
   AppRegistry,
@@ -55,7 +56,11 @@ var ViroCodeSamplesSceneNavigator = createReactClass({
         <View style={styles.viewStyle}>
           <SwipeUpDown
             itemMini={<Text style={styles.textStyle}>{this.state.textLangTitle}</Text>}// Pass props component when show full
-            itemFull={<Text style={styles.textStyle}>{this.state.textLangDetail}</Text>}// Pass props component when show full
+            itemFull={<ModelView
+              source={{ zip: 'https://github.com/BonnierNews/react-native-3d-model-view/blob/master/example/obj/Hamburger.zip?raw=true' }}
+              onLoadModelStart={this.onLoadModelStart}
+              onLoadModelSuccess={this.onLoadModelSuccess}
+              onLoadModelError={this.onLoadModelError} />}// Pass props component when show full
 
             onShowMini={() => console.log('mini')}
             onShowFull={() => console.log('full')}
