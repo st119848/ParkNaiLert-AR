@@ -70,7 +70,7 @@ const PNLAR = createReactClass({
 								this.props.sceneNavigator.viroAppProps.onAnchored(marker)
 								this.props.sceneNavigator.push({scene:ObjectScene});
 								// to navigate to detail component
-								// Actions.detail({renderText: true});
+								Actions.detail({renderText: true});
 							}
 						}
 						key={index}
