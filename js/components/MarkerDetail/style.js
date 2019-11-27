@@ -22,9 +22,9 @@ export const ThreeDBox = styled.View`
 export const Touch = styled.TouchableOpacity``;
 
 export const ThreeDText = styled.Text`
-    font-size: 40px;
+    font-size: 20px;
     font-family: Thonburi;
-    line-height: 44px;
+    line-height: 22px;
     text-align: center;
     padding: 20px 10px 16px 10px;
     color: white;
@@ -45,18 +45,18 @@ export const TextBox = styled.View`
 `;
 
 export const TitleText = styled.Text`
-    font-size: 35px;
+    font-size: 15px;
     font-family: Thonburi;
-    line-height: 39px;
+    line-height: 19px;
     text-align: left;
     color: white;
     margin-bottom: 25px;
 `;
 
 export const DetailText = styled.Text`
-    font-size: 20px;
+    font-size: 10px;
     font-family: Thonburi;
-    line-height: 23px;
+    line-height: 13px;
     text-align: left;
     color: white;
 `;

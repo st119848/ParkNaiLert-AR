@@ -70,7 +70,7 @@ const PNLAR = createReactClass({
 								this.props.sceneNavigator.viroAppProps.onAnchored(marker)
 								this.props.sceneNavigator.push({scene:ObjectScene});
 								// to navigate to detail component
-								Actions.detail({renderText: true});
+								//Actions.detail({renderText: true});
 							}
 						}
 						key={index}
@@ -153,29 +153,6 @@ ViroAnimations.registerAnimations({
 		easing: "easeineaseout",
 	},
 	tapAnimation: [["scaleSphereUp", "scaleSphereDown"]],
-});
-
-const styles = StyleSheet.create({
-	textStyle: {
-		flex: 0.5,
-		fontFamily: "Rosemary, Thonburi, Pingfang HK",
-		fontSize: 20,
-		color: "#ffffff",
-		lineHeight: 20,
-		textAlignVertical: "top",
-		textAlign: "left",
-		fontWeight: "bold",
-		includeFontPadding: false,
-	},
-	card: {
-		flexDirection: "column",
-	},
-	cardWrapper: {
-		flexDirection: "row",
-		alignItems: "flex-start",
-		padding: 0.001,
-		flex: 0.5,
-	},
 });
 
 export default PNLAR;
