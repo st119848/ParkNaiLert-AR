@@ -59,22 +59,50 @@ const PNLAR = createReactClass({
 		};
 	},
 
-	render: function() {
+	render: function () {
 		return (
 			<ViroARScene>
 				{this.allMarkers.map((marker, index) => (
 					<ViroARImageMarker
 						target={marker}
-						onAnchorFound={() => 
-							{
-								this.props.sceneNavigator.viroAppProps.onAnchored(marker)
-								this.props.sceneNavigator.push({scene:ObjectScene});
-								// to navigate to detail component
-								//Actions.detail({renderText: true});
-							}
+						onAnchorFound={() => {
+							this.props.sceneNavigator.viroAppProps.onAnchored(marker)
+							// to navigate to detail component
+							//Actions.detail({renderText: true});
+						}
 						}
 						key={index}
 						pauseUpdates={this.state.pauseUpdates}>
+						<ViroAmbientLight color='#ffffff' />
+						<ViroSpotLight
+							innerAngle={5}
+							outerAngle={25}
+							direction={[0, -1, 0]}
+							position={[0, 5, 1]}
+							color="#ffffff"
+							castsShadow={true}
+							shadowMapSize={2048}
+							shadowNearZ={2}
+							shadowFarZ={7}
+							shadowOpacity={.7}
+						/>
+						<Viro3DObject
+							source={require("../../../assets/3D/Jar.obj")}
+							resources={[require("../../../assets/3D/Jar.mtl"),
+							require("../../../assets/3D/maps/3a.jpg"),
+							require("../../../assets/3D/maps/3.jpg"),
+							require("../../../assets/3D/maps/4a.jpg")]}
+							position={[0.0, 0.0, 0.002]}
+							scale={[0.015, 0.015, 0.015]}
+							type='OBJ'
+							rotation={[0, 0, -90]}
+						/>
+						<ViroQuad
+							rotation={[-90, 0, 0]}
+							position={[0, -0.001, 0]}
+							width={2.5} height={2.5}
+							arShadowReceiver={true}
+						/>
 					</ViroARImageMarker>
 				))}
 			</ViroARScene>

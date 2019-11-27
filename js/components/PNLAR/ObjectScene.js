@@ -26,12 +26,6 @@ import {
 const createReactClass = require("create-react-class");
 
 const ObjectScene = createReactClass({
-	getInitialState() {
-		return {
-			texture: "white",
-		}
-	},
-
 	render: function () {
 		return (
 			<ViroARScene>
@@ -68,13 +62,6 @@ const ObjectScene = createReactClass({
 			</ViroARScene>
 		);
 	},
-});
-
-ViroMaterials.createMaterials({
-	white: {
-		lightingModel: "PBR",
-		diffuseTexture: require("../../../assets/3D/maps/3a.jpg")
-	}
 });
 
 export default ObjectScene;
