@@ -1,60 +1,63 @@
 "use strict";
 
-import React from "react";
-import { ViroARScene, ViroText } from "react-viro";
+import React, { Component } from "react";
+import PNLAR from "../PNLAR/PNLAR";
+import PNLARThree from "../PNLAR/PNLARThree";
+import ARData from "../../../assets/ARData.json";
+import { ViroARSceneNavigator } from "react-viro";
 import Header from "../Header/Header";
-import {
-	Theme,
-	Container,
-	DescriptionText,
-	HandImage,
-	ArrowUp,
-	ArrowDown,
-	ArrowRight,
-	ArrowLeft,
-	HandBox,
-	Row,
-} from "./style";
-import { Viro3DObject } from "react-viro";
+import MarkerDetail from "../MarkerDetail/MarkerDetail";
+import { Theme, BottomText, Border } from "./style";
+import { Actions } from "react-native-router-flux";
 
 var createReactClass = require("create-react-class");
+var apiKey = "185779F9-FAEC-4950-BF69-454D6BDD4EC6";
 
-var MarkerDetail = createReactClass({
-	render: function() {
-		return (
-			<Theme>
-				<Header
-					source={require("../../../assets/white-cross.png")}
-					renderBackArrow={true}
-				/>
-				<Container>
-					<HandBox>
-						<ArrowUp
-							source={require("../../../assets/hand_images/arrow-up.png")}
-						/>
-						<Row>
-							<ArrowLeft
-								source={require("../../../assets/hand_images/arrow-left.png")}
-							/>
-							<HandImage
-								source={require("../../../assets/hand_images/hand.png")}
-							/>
-							<ArrowRight
-								source={require("../../../assets/hand_images/arrow-right.png")}
-							/>
-						</Row>
-						<ArrowDown
-							source={require("../../../assets/hand_images/arrow-down.png")}
-						/>
-					</HandBox>
-					<DescriptionText>
-						Tap and hold on the object, then drag around to see every
-						perspective of the object.
-					</DescriptionText>
-				</Container>
-			</Theme>
-		);
-	},
-});
+var showARScene = true;
 
-export default MarkerDetail;
+class ModelView extends Component {
+	render() {
+		if (showARScene == true) {
+			return (
+				<Theme>
+					<Header source={require("../../../assets/black-cross.png")} />
+					<Border>
+
+						<ViroARSceneNavigator
+							initialScene={{ scene: PNLAR }}
+							apiKey={apiKey}
+							viroAppProps={{ onAnchored: this.onAnchored }}
+						/>
+						<BottomText>
+							Scan The Object
+							{/* {this.state.textLangTitle} */}
+						</BottomText>
+					</Border>
+				</Theme>
+			)
+		}
+		else {
+			return (
+				<Theme>
+					<Header source={require("../../../assets/black-cross.png")} />
+					<Border>
+						<ViroARSceneNavigator
+							initialScene={{ scene: PNLARThree }}
+							apiKey={apiKey}
+							viroAppProps={{ onAnchored: this.onAnchored }}
+						/>
+						<BottomText>
+							Hover over the Object
+
+							{/* {this.state.textLangTitle} */}
+						</BottomText>
+					</Border>
+				</Theme>
+			)
+		}
+	};
+}
+// Uncomment the below line to use the ARDrivingCar Demo. Don't forget to set the apiKey variable in ARDrivingCar.js
+// ViroCodeSamplesSceneNavigator = require('./js/ARDrivingCarDemo/ARDrivingCar');
+
+export default ModelView;

@@ -713,7 +713,7 @@
 },
 {
     "id": 24,
-    "source": "1.jpeg",
+    "source": "../../../assets/24.jpeg",
     "orientation": "Left",
     "physicalWidth": 0.10,
     "corePosition": [0, 0, 0],

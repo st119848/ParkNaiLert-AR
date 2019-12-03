@@ -9,6 +9,8 @@
     "postinstall": "jetifier -r"
   },
   "dependencies": {
+    "mobx": "^5.15.0",
+    "mobx-react": "^6.1.4",
     "react": "16.8.3",
     "react-native": "0.59.3",
     "react-native-3d-model-view": "^1.2.0",

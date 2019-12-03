@@ -45,9 +45,9 @@ const ObjectScene = createReactClass({
 				<Viro3DObject
 					source={require("../../../assets/3D/Jar.obj")}
 					resources={[require("../../../assets/3D/Jar.mtl"),
-					require("../../../assets/3D/maps/3a.jpg"),
-					require("../../../assets/3D/maps/3.jpg"),
-					require("../../../assets/3D/maps/4a.jpg")]}
+					require("../../../assets/3D/3a.jpg"),
+					require("../../../assets/3D/3.jpg"),
+					require("../../../assets/3D/4a.jpg")]}
 					position={[0.0, 0.0, 0.002]}
 					scale={[0.015, 0.015, 0.015]}
 					type='OBJ'
