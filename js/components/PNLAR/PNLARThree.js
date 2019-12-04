@@ -32,7 +32,7 @@ const createReactClass = require("create-react-class");
 export const Testing = "Hi world";
 
 const PNLAR = createReactClass({
-	allMarkers: ["1", "24", "31"],
+	allMarkers: ["4", "13", "16", "19", "24", "31", "32", "39", "40", "41", "44", "49"],
 
 	getInitialState(marker) {
 		const baseState = {
@@ -43,8 +43,18 @@ const PNLAR = createReactClass({
 			playAnim: false,
 			animateObject: true,
 			isShow: false,
+			dShow: false,
+			acShow: false,
+			afShow: false,
+			aiShow: false,
 			bdShow: false,
 			caShow: false,
+			cbShow: false,
+			ciShow: false,
+			doShow: false,
+			daShow: false,
+			ddShow: false,
+			diShow: false,
 		};
 		const varyState = {};
 		this.allMarkers.forEach(marker => {
@@ -91,23 +101,123 @@ const PNLAR = createReactClass({
 						/>
 
 						<Viro3DObject
+							source={require("../../../assets/3D/LandPaper.obj")}
+							resources={[require("../../../assets/3D/LandPaper.mtl")]}
+							position={[0, 0, 0.03]}
+							scale={[0.15, 0.15, 0.15]}
+							type='OBJ'
+							rotation={[0, 0, 0]}
+							visible={this.state.dShow}
+						/>
+
+						<Viro3DObject
+							source={require("../../../assets/3D/Tube.obj")}
+							resources={[require("../../../assets/3D/Tube.mtl")]}
+							position={[0, 0, 0.03]}
+							scale={[0.15, 0.15, 0.15]}
+							type='OBJ'
+							rotation={[0, 0, 0]}
+							visible={this.state.acShow}
+						/>
+
+						<Viro3DObject
+							source={require("../../../assets/3D/Khong.obj")}
+							resources={[require("../../../assets/3D/Khong.mtl")]}
+							position={[0, 0, 0.03]}
+							scale={[0.15, 0.15, 0.15]}
+							type='OBJ'
+							rotation={[0, 0, 0]}
+							visible={this.state.afShow}
+						/>
+
+						<Viro3DObject
+							source={require("../../../assets/3D/Picture.obj")}
+							resources={[require("../../../assets/3D/Picture.mtl")]}
+							position={[0, 0, 0.03]}
+							scale={[0.15, 0.15, 0.15]}
+							type='OBJ'
+							rotation={[0, 0, 0]}
+							visible={this.state.aiShow}
+						/>
+
+						<Viro3DObject
 							source={require("../../../assets/3D/Jar.obj")}
 							resources={[require("../../../assets/3D/Jar.mtl")]}
-							position={[0.0, 0.0, 0.002]}
-							scale={[0.015, 0.015, 0.015]}
+							position={[0, 0, 0.03]}
+							scale={[0.15, 0.15, 0.15]}
 							type='OBJ'
-							rotation={[0, 0, -90]}
+							rotation={[0, 0, -180]}
 							visible={this.state.bdShow}
 						/>
 
 						<Viro3DObject
 							source={require("../../../assets/3D/Drum.obj")}
 							resources={[require("../../../assets/3D/Drum.mtl")]}
-							position={[0.0, 0.0, 0.002]}
-							scale={[0.015, 0.015, 0.015]}
+							position={[0, 0, 0.03]}
+							scale={[0.15, 0.15, 0.15]}
 							type='OBJ'
-							rotation={[0, 0, -90]}
+							rotation={[0, 0, -180]}
 							visible={this.state.caShow}
+						/>
+
+						<Viro3DObject
+							source={require("../../../assets/3D/Tank.obj")}
+							resources={[require("../../../assets/3D/Tank.mtl")]}
+							position={[0, 0, 0.03]}
+							scale={[0.15, 0.15, 0.15]}
+							type='OBJ'
+							rotation={[0, 0, 0]}
+							visible={this.state.cbShow}
+						/>
+
+						<Viro3DObject
+							source={require("../../../assets/3D/Cabinet1.obj")}
+							resources={[require("../../../assets/3D/Cabinet1.mtl")]}
+							position={[0, 0, 0.03]}
+							scale={[0.15, 0.15, 0.15]}
+							type='OBJ'
+							rotation={[0, 0, 0]}
+							visible={this.state.ciShow}
+						/>
+
+						<Viro3DObject
+							source={require("../../../assets/3D/Cabinet2.obj")}
+							resources={[require("../../../assets/3D/Cabinet2.mtl")]}
+							position={[0, 0, 0.03]}
+							scale={[0.15, 0.15, 0.15]}
+							type='OBJ'
+							rotation={[0, 0, 0]}
+							visible={this.state.dzShow}
+						/>
+
+						<Viro3DObject
+							source={require("../../../assets/3D/TeaPot.obj")}
+							resources={[require("../../../assets/3D/TeaPot.mtl")]}
+							position={[0, 0, 0.03]}
+							scale={[0.15, 0.15, 0.15]}
+							type='OBJ'
+							rotation={[0, 0, 0]}
+							visible={this.state.daShow}
+						/>
+
+						<Viro3DObject
+							source={require("../../../assets/3D/SewingMachine.obj")}
+							resources={[require("../../../assets/3D/SewingMachine.mtl")]}
+							position={[0, 0, 0.03]}
+							scale={[0.15, 0.15, 0.15]}
+							type='OBJ'
+							rotation={[0, 0, 0]}
+							visible={this.state.ddShow}
+						/>
+
+						<Viro3DObject
+							source={require("../../../assets/3D/Screen.obj")}
+							resources={[require("../../../assets/3D/Screen.mtl")]}
+							position={[0, 0, 0.03]}
+							scale={[0.15, 0.15, 0.15]}
+							type='OBJ'
+							rotation={[0, 0, 0]}
+							visible={this.state.diShow}
 						/>
 
 						<ViroQuad
@@ -136,6 +246,26 @@ const PNLAR = createReactClass({
 			stateForSet["isShow" + marker] = true;
 			this.setState(stateForSet);
 		};
+		if (marker == 4) {
+			this.setState({
+				dShow: true
+			})
+		};
+		if (marker == 13) {
+			this.setState({
+				acShow: true
+			})
+		};
+		if (marker == 16) {
+			this.setState({
+				afShow: true
+			})
+		};
+		if (marker == 19) {
+			this.setState({
+				aiShow: true
+			})
+		};
 		if (marker == 24) {
 			this.setState({
 				bdShow: true
@@ -144,6 +274,36 @@ const PNLAR = createReactClass({
 		if (marker == 31) {
 			this.setState({
 				caShow: true
+			})
+		};
+		if (marker == 32) {
+			this.setState({
+				cbShow: true
+			})
+		};
+		if (marker == 39) {
+			this.setState({
+				ciShow: true
+			})
+		};
+		if (marker == 40) {
+			this.setState({
+				doShow: true
+			})
+		};
+		if (marker == 41) {
+			this.setState({
+				daShow: true
+			})
+		};
+		if (marker == 44) {
+			this.setState({
+				ddShow: true
+			})
+		};
+		if (marker == 49) {
+			this.setState({
+				diShow: true
 			})
 		};
 	},
@@ -163,10 +323,25 @@ ViroMaterials.createMaterials({
 });
 
 ViroARTrackingTargets.createTargets({
-	"1": {
-		source: require("../../../assets/1.jpeg"),
+	"4": {
+		source: require("../../../assets/4.jpeg"),
 		orientation: "Left",
-		physicalWidth: ARData[0].physicalWidth, // real world width in meters
+		physicalWidth: ARData[3].physicalWidth, // real world width in meters
+	},
+	"13": {
+		source: require("../../../assets/13.jpeg"),
+		orientation: "Left",
+		physicalWidth: ARData[12].physicalWidth, // real world width in meters
+	},
+	"16": {
+		source: require("../../../assets/16.jpeg"),
+		orientation: "Left",
+		physicalWidth: ARData[15].physicalWidth, // real world width in meters
+	},
+	"19": {
+		source: require("../../../assets/19.jpeg"),
+		orientation: "Left",
+		physicalWidth: ARData[18].physicalWidth, // real world width in meters
 	},
 	"24": {
 		source: PicTest,
@@ -177,6 +352,36 @@ ViroARTrackingTargets.createTargets({
 		source: require("../../../assets/31.jpeg"),
 		orientation: "Left",
 		physicalWidth: ARData[30].physicalWidth, // real world width in meters
+	},
+	"32": {
+		source: require("../../../assets/32.jpeg"),
+		orientation: "Left",
+		physicalWidth: ARData[31].physicalWidth, // real world width in meters
+	},
+	"39": {
+		source: require("../../../assets/39.jpeg"),
+		orientation: "Left",
+		physicalWidth: ARData[38].physicalWidth, // real world width in meters
+	},
+	"40": {
+		source: require("../../../assets/40.jpeg"),
+		orientation: "Left",
+		physicalWidth: ARData[39].physicalWidth, // real world width in meters
+	},
+	"41": {
+		source: require("../../../assets/41.jpeg"),
+		orientation: "Left",
+		physicalWidth: ARData[40].physicalWidth, // real world width in meters
+	},
+	"44": {
+		source: require("../../../assets/44.jpeg"),
+		orientation: "Left",
+		physicalWidth: ARData[43].physicalWidth, // real world width in meters
+	},
+	"49": {
+		source: require("../../../assets/49.jpeg"),
+		orientation: "Left",
+		physicalWidth: ARData[48].physicalWidth, // real world width in meters
 	}
 });
 
