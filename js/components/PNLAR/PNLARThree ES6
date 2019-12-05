@@ -16,6 +16,30 @@ import Pic40 from "../../../assets/40.jpeg";
 import Pic41 from "../../../assets/41.jpeg";
 import Pic44 from "../../../assets/44.jpeg";
 import Pic49 from "../../../assets/49.jpeg";
+import Cabinet1 from "../../../assets/3D/Cabinet1.obj";
+import Cabinet1m from "../../../assets/3D/Cabinet1m.mtl";
+import Cabinet2 from "../../../assets/3D/Cabinet2.obj";
+import Cabinet2m from "../../../assets/3D/Cabinet2m.mtl";
+import Drum from "../../../assets/3D/Drum.obj";
+import Drumm from "../../../assets/3D/Drumm.mtl";
+import Jar from "../../../assets/3D/Jar.obj";
+import Jarm from "../../../assets/3D/Jarm.mtl";
+import Khong from "../../../assets/3D/Khong.obj";
+import Khongm from "../../../assets/3D/Khongm.mtl";
+import LandPaper from "../../../assets/3D/LandPaper.obj";
+import LandPaperm from "../../../assets/3D/LandPaperm.mtl";
+import Picture from "../../../assets/3D/Picture.obj";
+import Picturem from "../../../assets/3D/Picturem.mtl";
+import Screen from "../../../assets/3D/Screen.obj";
+import Screenm from "../../../assets/3D/Screenm.mtl";
+import SewingMachine from "../../../assets/3D/SewingMachine.obj";
+import SewingMachinem from "../../../assets/3D/SewingMachinem.mtl";
+import Tank from "../../../assets/3D/Tank.obj";
+import Tankm from "../../../assets/3D/Tankm.mtl";
+import TeaPot from "../../../assets/3D/TeaPot.obj";
+import TeaPotm from "../../../assets/3D/TeaPotm.mtl";
+import Tube from "../../../assets/3D/Tube.obj";
+import Tubem from "../../../assets/3D/Tubem.mtl";
 
 import {
 	ViroARScene,
@@ -112,8 +136,8 @@ const PNLAR = createReactClass({
 						/>
 
 						<Viro3DObject
-							source={require("../../../assets/3D/LandPaper.obj")}
-							resources={[require("../../../assets/3D/LandPaperm.mtl")]}
+							source={LandPaper}
+							resources={LandPaperm}
 							position={[0, 0, 0.03]}
 							scale={[0.15, 0.15, 0.15]}
 							type='OBJ'
@@ -122,8 +146,8 @@ const PNLAR = createReactClass({
 						/>
 
 						<Viro3DObject
-							source={require("../../../assets/3D/Tube.obj")}
-							resources={[require("../../../assets/3D/Tubem.mtl")]}
+							source={Tube}
+							resources={Tubem}
 							position={[0, 0, 0.03]}
 							scale={[0.15, 0.15, 0.15]}
 							type='OBJ'
@@ -132,8 +156,8 @@ const PNLAR = createReactClass({
 						/>
 
 						<Viro3DObject
-							source={require("../../../assets/3D/Khong.obj")}
-							resources={[require("../../../assets/3D/Khongm.mtl")]}
+							source={Khong}
+							resources={Khongm}
 							position={[0, 0, 0.03]}
 							scale={[0.15, 0.15, 0.15]}
 							type='OBJ'
@@ -142,8 +166,8 @@ const PNLAR = createReactClass({
 						/>
 
 						<Viro3DObject
-							source={require("../../../assets/3D/Picture.obj")}
-							resources={[require("../../../assets/3D/Picturem.mtl")]}
+							source={Picture}
+							resources={Picturem}
 							position={[0, 0, 0.03]}
 							scale={[0.15, 0.15, 0.15]}
 							type='OBJ'
@@ -152,8 +176,8 @@ const PNLAR = createReactClass({
 						/>
 
 						<Viro3DObject
-							source={require("../../../assets/3D/Jar.obj")}
-							resources={[require("../../../assets/3D/Jarm.mtl")]}
+							source={Jar}
+							resources={Jarm}
 							position={[0, 0, 0.03]}
 							scale={[0.15, 0.15, 0.15]}
 							type='OBJ'
@@ -162,8 +186,8 @@ const PNLAR = createReactClass({
 						/>
 
 						<Viro3DObject
-							source={require("../../../assets/3D/Drum.obj")}
-							resources={[require("../../../assets/3D/Drumm.mtl")]}
+							source={Drum}
+							resources={Drumm}
 							position={[0, 0, 0.03]}
 							scale={[0.15, 0.15, 0.15]}
 							type='OBJ'
@@ -172,8 +196,8 @@ const PNLAR = createReactClass({
 						/>
 
 						<Viro3DObject
-							source={require("../../../assets/3D/Tank.obj")}
-							resources={[require("../../../assets/3D/Tankm.mtl")]}
+							source={Tank}
+							resources={Tankm}
 							position={[0, 0, 0.03]}
 							scale={[0.15, 0.15, 0.15]}
 							type='OBJ'
@@ -182,8 +206,8 @@ const PNLAR = createReactClass({
 						/>
 
 						<Viro3DObject
-							source={require("../../../assets/3D/Cabinet1.obj")}
-							resources={[require("../../../assets/3D/Cabinet1m.mtl")]}
+							source={Cabinet1}
+							resources={Cabinet1m}
 							position={[0, 0, 0.03]}
 							scale={[0.15, 0.15, 0.15]}
 							type='OBJ'
@@ -192,8 +216,8 @@ const PNLAR = createReactClass({
 						/>
 
 						<Viro3DObject
-							source={require("../../../assets/3D/Cabinet2.obj")}
-							resources={[require("../../../assets/3D/Cabinet2m.mtl")]}
+							source={Cabinet2}
+							resources={Cabinet2m}
 							position={[0, 0, 0.03]}
 							scale={[0.15, 0.15, 0.15]}
 							type='OBJ'
@@ -202,8 +226,8 @@ const PNLAR = createReactClass({
 						/>
 
 						<Viro3DObject
-							source={require("../../../assets/3D/TeaPot.obj")}
-							resources={[require("../../../assets/3D/TeaPotm.mtl")]}
+							source={TeaPot}
+							resources={TeaPotm}
 							position={[0, 0, 0.03]}
 							scale={[0.15, 0.15, 0.15]}
 							type='OBJ'
@@ -212,8 +236,8 @@ const PNLAR = createReactClass({
 						/>
 
 						<Viro3DObject
-							source={require("../../../assets/3D/SewingMachine.obj")}
-							resources={[require("../../../assets/3D/SewingMachinem.mtl")]}
+							source={SewingMachine}
+							resources={SewingMachinem}
 							position={[0, 0, 0.03]}
 							scale={[0.15, 0.15, 0.15]}
 							type='OBJ'
@@ -222,8 +246,8 @@ const PNLAR = createReactClass({
 						/>
 
 						<Viro3DObject
-							source={require("../../../assets/3D/Screen.obj")}
-							resources={[require("../../../assets/3D/Screenm.mtl")]}
+							source={Screen}
+							resources={Screenm}
 							position={[0, 0, 0.03]}
 							scale={[0.15, 0.15, 0.15]}
 							type='OBJ'

@@ -4,7 +4,57 @@ import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import ARData from "../../../assets/ARData.json";
 import { Actions } from "react-native-router-flux";
-import PicTest from "../../../assets/24.jpeg";
+import Pic1 from "../../../assets/1.jpeg";
+import Pic2 from "../../../assets/2.jpeg";
+import Pic3 from "../../../assets/3.jpeg";
+import Pic4 from "../../../assets/4.jpeg";
+import Pic5 from "../../../assets/5.jpeg";
+import Pic6 from "../../../assets/6.jpeg";
+import Pic7 from "../../../assets/7.jpeg";
+import Pic8 from "../../../assets/8.jpeg";
+import Pic9 from "../../../assets/9.jpeg";
+import Pic10 from "../../../assets/10.jpeg";
+import Pic11 from "../../../assets/11.jpeg";
+import Pic12 from "../../../assets/12.jpeg";
+import Pic13 from "../../../assets/13.jpeg";
+import Pic14 from "../../../assets/14.jpeg";
+import Pic15 from "../../../assets/15.jpeg";
+import Pic16 from "../../../assets/16.jpeg";
+import Pic17 from "../../../assets/17.jpeg";
+import Pic18 from "../../../assets/18.jpeg";
+import Pic19 from "../../../assets/19.jpeg";
+import Pic20 from "../../../assets/20.jpeg";
+import Pic21 from "../../../assets/21.jpeg";
+import Pic22 from "../../../assets/22.jpeg";
+import Pic23 from "../../../assets/23.jpeg";
+import Pic24 from "../../../assets/24.jpeg";
+import Pic25 from "../../../assets/25.jpeg";
+import Pic26 from "../../../assets/26.jpeg";
+import Pic27 from "../../../assets/27.jpeg";
+import Pic28 from "../../../assets/28.jpeg";
+import Pic29 from "../../../assets/29.jpeg";
+import Pic30 from "../../../assets/30.jpeg";
+import Pic31 from "../../../assets/31.jpeg";
+import Pic32 from "../../../assets/32.jpeg";
+import Pic33 from "../../../assets/33.jpeg";
+import Pic34 from "../../../assets/34.jpeg";
+import Pic35 from "../../../assets/35.jpeg";
+import Pic36 from "../../../assets/36.jpeg";
+import Pic37 from "../../../assets/37.jpeg";
+import Pic38 from "../../../assets/38.jpeg";
+import Pic39 from "../../../assets/39.jpeg";
+import Pic40 from "../../../assets/40.jpeg";
+import Pic41 from "../../../assets/41.jpeg";
+import Pic42 from "../../../assets/42.jpeg";
+import Pic43 from "../../../assets/43.jpeg";
+import Pic44 from "../../../assets/44.jpeg";
+import Pic45 from "../../../assets/45.jpeg";
+import Pic46 from "../../../assets/46.jpeg";
+import Pic47 from "../../../assets/47.jpeg";
+import Pic48 from "../../../assets/48.jpeg";
+import Pic49 from "../../../assets/49.jpeg";
+import Pic50 from "../../../assets/50.jpeg";
+
 
 import {
 	ViroARScene,
@@ -64,7 +114,6 @@ const PNLAR = createReactClass({
 	_onAnchorFound(marker) {
 		// Show only when isShow is all false
 		let allNotShow = true;
-		alert(marker);
 		this.allMarkers.forEach(marker => {
 			if (this.state["isShow" + marker]) {
 				console.log("all not show false ");
@@ -81,252 +130,252 @@ const PNLAR = createReactClass({
 
 ViroARTrackingTargets.createTargets({
 	"1": {
-		source: require("../../../assets/1.jpeg"),
+		source: Pic1,
 		orientation: "Left",
 		physicalWidth: ARData[0].physicalWidth, // real world width in meters
 	},
 	"2": {
-		source: require("../../../assets/2.jpeg"),
+		source: Pic2,
 		orientation: "Left",
 		physicalWidth: ARData[1].physicalWidth, // real world width in meters
 	},
 	"3": {
-		source: require("../../../assets/3.jpeg"),
+		source: Pic3,
 		orientation: "Left",
 		physicalWidth: ARData[2].physicalWidth, // real world width in meters
 	},
 	"4": {
-		source: require("../../../assets/4.jpeg"),
+		source: Pic4,
 		orientation: "Left",
 		physicalWidth: ARData[3].physicalWidth, // real world width in meters
 	},
 	"5": {
-		source: require("../../../assets/5.jpeg"),
+		source: Pic5,
 		orientation: "Left",
 		physicalWidth: ARData[4].physicalWidth, // real world width in meters
 	},
 	"6": {
-		source: require("../../../assets/6.jpeg"),
+		source: Pic6,
 		orientation: "Left",
 		physicalWidth: ARData[5].physicalWidth, // real world width in meters
 	},
 	"7": {
-		source: require("../../../assets/7.jpeg"),
+		source: Pic7,
 		orientation: "Left",
 		physicalWidth: ARData[6].physicalWidth, // real world width in meters
 	},
 	"8": {
-		source: require("../../../assets/8.jpeg"),
+		source: Pic8,
 		orientation: "Left",
 		physicalWidth: ARData[7].physicalWidth, // real world width in meters
 	},
 	"9": {
-		source: require("../../../assets/9.jpeg"),
+		source: Pic9,
 		orientation: "Left",
 		physicalWidth: ARData[8].physicalWidth, // real world width in meters
 	},
 	"10": {
-		source: require("../../../assets/10.jpeg"),
+		source: Pic10,
 		orientation: "Left",
 		physicalWidth: ARData[9].physicalWidth, // real world width in meters
 	},
 	"11": {
-		source: require("../../../assets/11.jpeg"),
+		source: Pic11,
 		orientation: "Left",
 		physicalWidth: ARData[10].physicalWidth, // real world width in meters
 	},
 	"12": {
-		source: require("../../../assets/12.jpeg"),
+		source: Pic12,
 		orientation: "Left",
 		physicalWidth: ARData[11].physicalWidth, // real world width in meters
 	},
 	"13": {
-		source: require("../../../assets/13.jpeg"),
+		source: Pic13,
 		orientation: "Left",
 		physicalWidth: ARData[12].physicalWidth, // real world width in meters
 	},
 	"14": {
-		source: require("../../../assets/14.jpeg"),
+		source: Pic14,
 		orientation: "Left",
 		physicalWidth: ARData[13].physicalWidth, // real world width in meters
 	},
 	"15": {
-		source: require("../../../assets/15.jpeg"),
+		source: Pic15,
 		orientation: "Left",
 		physicalWidth: ARData[14].physicalWidth, // real world width in meters
 	},
 	"16": {
-		source: require("../../../assets/16.jpeg"),
+		source: Pic16,
 		orientation: "Left",
 		physicalWidth: ARData[15].physicalWidth, // real world width in meters
 	},
 	"17": {
-		source: require("../../../assets/17.jpeg"),
+		source: Pic17,
 		orientation: "Left",
 		physicalWidth: ARData[16].physicalWidth, // real world width in meters
 	},
 	"18": {
-		source: require("../../../assets/18.jpeg"),
+		source: Pic18,
 		orientation: "Left",
 		physicalWidth: ARData[17].physicalWidth, // real world width in meters
 	},
 	"19": {
-		source: require("../../../assets/19.jpeg"),
+		source: Pic19,
 		orientation: "Left",
 		physicalWidth: ARData[18].physicalWidth, // real world width in meters
 	},
 	"20": {
-		source: require("../../../assets/20.jpeg"),
+		source: Pic20,
 		orientation: "Left",
 		physicalWidth: ARData[19].physicalWidth, // real world width in meters
 	},
 	"21": {
-		source: require("../../../assets/22.jpeg"),
+		source: Pic21,
 		orientation: "Left",
 		physicalWidth: ARData[20].physicalWidth, // real world width in meters
 	},
 	"22": {
-		source: require("../../../assets/22.jpeg"),
+		source: Pic22,
 		orientation: "Left",
 		physicalWidth: ARData[21].physicalWidth, // real world width in meters
 	},
 	"23": {
-		source: require("../../../assets/23.jpeg"),
+		source: Pic23,
 		orientation: "Left",
 		physicalWidth: ARData[22].physicalWidth, // real world width in meters
 	},
 	"24": {
-		source: require("../../../assets/24.jpeg"),
+		source: Pic24,
 		orientation: "Left",
 		physicalWidth: ARData[23].physicalWidth, // real world width in meters
 	},
 	"25": {
-		source: require("../../../assets/24.jpeg"),
+		source: Pic25,
 		orientation: "Left",
 		physicalWidth: ARData[24].physicalWidth, // real world width in meters
 	},
 	"26": {
-		source: require("../../../assets/26.jpeg"),
+		source: Pic26,
 		orientation: "Left",
 		physicalWidth: ARData[25].physicalWidth, // real world width in meters
 	},
 	"27": {
-		source: require("../../../assets/27.jpeg"),
+		source: Pic27,
 		orientation: "Left",
 		physicalWidth: ARData[26].physicalWidth, // real world width in meters
 	},
 	"28": {
-		source: require("../../../assets/28.jpeg"),
+		source: Pic28,
 		orientation: "Left",
 		physicalWidth: ARData[27].physicalWidth, // real world width in meters
 	},
 	"29": {
-		source: require("../../../assets/29.jpeg"),
+		source: Pic29,
 		orientation: "Left",
 		physicalWidth: ARData[28].physicalWidth, // real world width in meters
 	},
 	"30": {
-		source: require("../../../assets/30.jpeg"),
+		source: Pic30,
 		orientation: "Left",
 		physicalWidth: ARData[29].physicalWidth, // real world width in meters
 	},
 	"31": {
-		source: require("../../../assets/31.jpeg"),
+		source: Pic31,
 		orientation: "Left",
 		physicalWidth: ARData[30].physicalWidth, // real world width in meters
 	},
 	"32": {
-		source: require("../../../assets/32.jpeg"),
+		source: Pic32,
 		orientation: "Left",
 		physicalWidth: ARData[31].physicalWidth, // real world width in meters
 	},
 	"33": {
-		source: require("../../../assets/33.jpeg"),
+		source: Pic33,
 		orientation: "Left",
 		physicalWidth: ARData[32].physicalWidth, // real world width in meters
 	},
 	"34": {
-		source: require("../../../assets/34.jpeg"),
+		source: Pic34,
 		orientation: "Left",
 		physicalWidth: ARData[33].physicalWidth, // real world width in meters
 	},
 	"35": {
-		source: require("../../../assets/35.jpeg"),
+		source: Pic35,
 		orientation: "Left",
 		physicalWidth: ARData[34].physicalWidth, // real world width in meters
 	},
 	"36": {
-		source: require("../../../assets/36.jpeg"),
+		source: Pic36,
 		orientation: "Left",
 		physicalWidth: ARData[35].physicalWidth, // real world width in meters
 	},
 	"37": {
-		source: require("../../../assets/37.jpeg"),
+		source: Pic37,
 		orientation: "Left",
 		physicalWidth: ARData[36].physicalWidth, // real world width in meters
 	},
 	"38": {
-		source: require("../../../assets/38.jpeg"),
+		source: Pic38,
 		orientation: "Left",
 		physicalWidth: ARData[37].physicalWidth, // real world width in meters
 	},
 	"39": {
-		source: require("../../../assets/39.jpeg"),
+		source: Pic39,
 		orientation: "Left",
 		physicalWidth: ARData[38].physicalWidth, // real world width in meters
 	},
 	"40": {
-		source: require("../../../assets/40.jpeg"),
+		source: Pic40,
 		orientation: "Left",
 		physicalWidth: ARData[39].physicalWidth, // real world width in meters
 	},
 	"41": {
-		source: require("../../../assets/41.jpeg"),
+		source: Pic41,
 		orientation: "Left",
 		physicalWidth: ARData[40].physicalWidth, // real world width in meters
 	},
 	"42": {
-		source: require("../../../assets/42.jpeg"),
+		source: Pic42,
 		orientation: "Left",
 		physicalWidth: ARData[41].physicalWidth, // real world width in meters
 	},
 	"43": {
-		source: require("../../../assets/43.jpeg"),
+		source: Pic43,
 		orientation: "Left",
 		physicalWidth: ARData[42].physicalWidth, // real world width in meters
 	},
 	"44": {
-		source: require("../../../assets/44.jpeg"),
+		source: Pic44,
 		orientation: "Left",
 		physicalWidth: ARData[43].physicalWidth, // real world width in meters
 	},
 	"45": {
-		source: require("../../../assets/45.jpeg"),
+		source: Pic45,
 		orientation: "Left",
 		physicalWidth: ARData[44].physicalWidth, // real world width in meters
 	},
 	"46": {
-		source: require("../../../assets/46.jpeg"),
+		source: Pic46,
 		orientation: "Left",
 		physicalWidth: ARData[45].physicalWidth, // real world width in meters
 	},
 	"47": {
-		source: require("../../../assets/47.jpeg"),
+		source: Pic47,
 		orientation: "Left",
 		physicalWidth: ARData[46].physicalWidth, // real world width in meters
 	},
 	"48": {
-		source: require("../../../assets/48.jpeg"),
+		source: Pic48,
 		orientation: "Left",
 		physicalWidth: ARData[47].physicalWidth, // real world width in meters
 	},
 	"49": {
-		source: require("../../../assets/49.jpeg"),
+		source: Pic49,
 		orientation: "Left",
 		physicalWidth: ARData[48].physicalWidth, // real world width in meters
 	},
 	"50": {
-		source: require("../../../assets/50.jpeg"),
+		source: Pic50,
 		orientation: "Left",
 		physicalWidth: ARData[49].physicalWidth, // real world width in meters
 	}
