@@ -13,7 +13,7 @@ import { Actions } from "react-native-router-flux";
 var createReactClass = require("create-react-class");
 var apiKey = "185779F9-FAEC-4950-BF69-454D6BDD4EC6";
 
-var ScanTheObject = createReactClass({
+var ScanTheObjectOne = createReactClass({
 	getInitialState(marker) {
 		const detailState = {
 			textLangTitle: "",
@@ -82,4 +82,4 @@ var ScanTheObject = createReactClass({
 // Uncomment the below line to use the ARDrivingCar Demo. Don't forget to set the apiKey variable in ARDrivingCar.js
 // ViroCodeSamplesSceneNavigator = require('./js/ARDrivingCarDemo/ARDrivingCar');
 
-module.exports = ScanTheObject;
+module.exports = ScanTheObjectOne;

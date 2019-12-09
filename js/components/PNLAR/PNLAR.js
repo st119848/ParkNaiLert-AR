@@ -38,22 +38,6 @@ import Pic31 from "../../../assets/31.jpeg";
 import Pic32 from "../../../assets/32.jpeg";
 import Pic33 from "../../../assets/33.jpeg";
 import Pic34 from "../../../assets/34.jpeg";
-import Pic35 from "../../../assets/35.jpeg";
-import Pic36 from "../../../assets/36.jpeg";
-import Pic37 from "../../../assets/37.jpeg";
-import Pic38 from "../../../assets/38.jpeg";
-import Pic39 from "../../../assets/39.jpeg";
-import Pic40 from "../../../assets/40.jpeg";
-import Pic41 from "../../../assets/41.jpeg";
-import Pic42 from "../../../assets/42.jpeg";
-import Pic43 from "../../../assets/43.jpeg";
-import Pic44 from "../../../assets/44.jpeg";
-import Pic45 from "../../../assets/45.jpeg";
-import Pic46 from "../../../assets/46.jpeg";
-import Pic47 from "../../../assets/47.jpeg";
-import Pic48 from "../../../assets/48.jpeg";
-import Pic49 from "../../../assets/49.jpeg";
-import Pic50 from "../../../assets/50.jpeg";
 
 
 import {
@@ -65,7 +49,7 @@ import {
 const createReactClass = require("create-react-class");
 
 const PNLAR = createReactClass({
-	allMarkers: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24","25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50"],
+	allMarkers: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24","25", "26", "27", "28", "29", "30", "31", "32", "33", "34"],
 
 	getInitialState(marker) {
 		const baseState = {
@@ -298,86 +282,6 @@ ViroARTrackingTargets.createTargets({
 		source: Pic34,
 		orientation: "Left",
 		physicalWidth: ARData[33].physicalWidth, // real world width in meters
-	},
-	"35": {
-		source: Pic35,
-		orientation: "Left",
-		physicalWidth: ARData[34].physicalWidth, // real world width in meters
-	},
-	"36": {
-		source: Pic36,
-		orientation: "Left",
-		physicalWidth: ARData[35].physicalWidth, // real world width in meters
-	},
-	"37": {
-		source: Pic37,
-		orientation: "Left",
-		physicalWidth: ARData[36].physicalWidth, // real world width in meters
-	},
-	"38": {
-		source: Pic38,
-		orientation: "Left",
-		physicalWidth: ARData[37].physicalWidth, // real world width in meters
-	},
-	"39": {
-		source: Pic39,
-		orientation: "Left",
-		physicalWidth: ARData[38].physicalWidth, // real world width in meters
-	},
-	"40": {
-		source: Pic40,
-		orientation: "Left",
-		physicalWidth: ARData[39].physicalWidth, // real world width in meters
-	},
-	"41": {
-		source: Pic41,
-		orientation: "Left",
-		physicalWidth: ARData[40].physicalWidth, // real world width in meters
-	},
-	"42": {
-		source: Pic42,
-		orientation: "Left",
-		physicalWidth: ARData[41].physicalWidth, // real world width in meters
-	},
-	"43": {
-		source: Pic43,
-		orientation: "Left",
-		physicalWidth: ARData[42].physicalWidth, // real world width in meters
-	},
-	"44": {
-		source: Pic44,
-		orientation: "Left",
-		physicalWidth: ARData[43].physicalWidth, // real world width in meters
-	},
-	"45": {
-		source: Pic45,
-		orientation: "Left",
-		physicalWidth: ARData[44].physicalWidth, // real world width in meters
-	},
-	"46": {
-		source: Pic46,
-		orientation: "Left",
-		physicalWidth: ARData[45].physicalWidth, // real world width in meters
-	},
-	"47": {
-		source: Pic47,
-		orientation: "Left",
-		physicalWidth: ARData[46].physicalWidth, // real world width in meters
-	},
-	"48": {
-		source: Pic48,
-		orientation: "Left",
-		physicalWidth: ARData[47].physicalWidth, // real world width in meters
-	},
-	"49": {
-		source: Pic49,
-		orientation: "Left",
-		physicalWidth: ARData[48].physicalWidth, // real world width in meters
-	},
-	"50": {
-		source: Pic50,
-		orientation: "Left",
-		physicalWidth: ARData[49].physicalWidth, // real world width in meters
 	}
 });
 
