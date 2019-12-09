@@ -32,6 +32,7 @@ var MarkerDetail = createReactClass({
 					{/* <ImageBox>
 						<ImageStyle source={sauce} />
 					</ImageBox> */}
+					<TitleText>โปรดเลือกโซนของพิพิธภัณฑ์</TitleText>
 						<ThreeDBox>
 							<Touch onPress={() => {
 								Actions.scan1({
@@ -39,7 +40,7 @@ var MarkerDetail = createReactClass({
 
 								});
 							}}>
-								<ThreeDText>Test Navigator</ThreeDText>
+								<ThreeDText>เรือนท่านผู้หญิง ></ThreeDText>
 							</Touch>
 						</ThreeDBox>
 						<ThreeDBox>
@@ -49,7 +50,7 @@ var MarkerDetail = createReactClass({
 
 								});
 							}}>
-								<ThreeDText>Test Navigator</ThreeDText>
+								<ThreeDText>เรือนท่านเจ้าคุณ ></ThreeDText>
 							</Touch>
 						</ThreeDBox>
 					{/* <ScrollView>
