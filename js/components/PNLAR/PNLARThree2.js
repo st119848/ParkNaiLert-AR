@@ -34,7 +34,7 @@ const createReactClass = require("create-react-class");
 export const Testing = "Hi world";
 
 const PNLARThree2 = createReactClass({
-	allMarkers: ["24", "31", "32"],
+	allMarkers: ["24"],
 
 	getInitialState(marker) {
 		const baseState = {
@@ -97,19 +97,19 @@ const PNLARThree2 = createReactClass({
 							source={require("../../../assets/3D/Jar.obj")}
 							resources={[require("../../../assets/3D/Jar.mtl")]}
 							position={[0, 0, 0.03]}
-							scale={[0.15, 0.15, 0.15]}
+							scale={[0.015, 0.015, 0.015]}
 							type='OBJ'
-							rotation={[0, 0, -180]}
+							rotation={[0, 0, 90]}
 							visible={this.state.bdShow}
 						/>
-
+{/* 
 						<Viro3DObject
 							source={require("../../../assets/3D/Drum.obj")}
 							resources={[require("../../../assets/3D/Drumm.mtl")]}
 							position={[0, 0, 0.03]}
-							scale={[0.15, 0.15, 0.15]}
+							scale={[0.015, 0.015, 0.015]}
 							type='OBJ'
-							rotation={[0, 0, -180]}
+							rotation={[0, 0, 90]}
 							visible={this.state.caShow}
 						/>
 
@@ -117,11 +117,11 @@ const PNLARThree2 = createReactClass({
 							source={require("../../../assets/3D/Tank.obj")}
 							resources={[require("../../../assets/3D/Tankm.mtl")]}
 							position={[0, 0, 0.03]}
-							scale={[0.15, 0.15, 0.15]}
+							scale={[0.015, 0.015, 0.015]}
 							type='OBJ'
 							rotation={[0, 0, 0]}
 							visible={this.state.cbShow}
-						/>
+						/> */}
 
 						<ViroQuad
 							rotation={[-90, 0, 0]}
@@ -149,6 +149,7 @@ const PNLARThree2 = createReactClass({
 			this.setState(stateForSet);
 		};
 		if (marker == 24) {
+			alert("Test");
 			this.setState({
 				bdShow: true
 			})
@@ -184,16 +185,6 @@ ViroARTrackingTargets.createTargets({
 		source: Pic24,
 		orientation: "Left",
 		physicalWidth: ARData[23].physicalWidth, // real world width in meters
-	},
-	"31": {
-		source: Pic31,
-		orientation: "Left",
-		physicalWidth: ARData[30].physicalWidth, // real world width in meters
-	},
-	"32": {
-		source: Pic32,
-		orientation: "Left",
-		physicalWidth: ARData[31].physicalWidth, // real world width in meters
 	}
 });
 
