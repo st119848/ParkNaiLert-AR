@@ -2,11 +2,11 @@
 
 import React, { Component } from "react";
 import PNLAR2 from "../PNLAR/PNLAR2";
-import PNLARThree from "../PNLAR/PNLARThree";
+import PNLARThree2 from "../PNLAR/PNLARThree2";
 import ARData from "../../../assets/ARData.json";
 import { ViroARSceneNavigator } from "react-viro";
 import Header from "../Header/Header";
-import MarkerDetail from "../MarkerDetail/MarkerDetail";
+import MarkerDetail from "../MarkerDetail/MarkerDetail1";
 import { Theme, BottomText, Border } from "./style";
 import { Actions } from "react-native-router-flux";
 
@@ -53,7 +53,7 @@ var ScanTheObjectTwo = createReactClass({
 					<Header source={require("../../../assets/black-cross.png")}/>
 					<Border>
 						<ViroARSceneNavigator
-							initialScene={{ scene: PNLARThree }}
+							initialScene={{ scene: PNLARThree2 }}
 							apiKey={apiKey}
 							viroAppProps={{ onAnchored: this.onAnchored ,showARScene:this.state.showARScene}}
 						/>
