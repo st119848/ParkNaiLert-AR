@@ -34,7 +34,7 @@ const createReactClass = require("create-react-class");
 export const Testing = "Hi world";
 
 const PNLARThree2 = createReactClass({
-	allMarkers: ["24"],
+	allMarkers: ["24", "31", "32"],
 
 	getInitialState(marker) {
 		const baseState = {
@@ -102,7 +102,7 @@ const PNLARThree2 = createReactClass({
 							rotation={[0, 0, 90]}
 							visible={this.state.bdShow}
 						/>
-{/* 
+
 						<Viro3DObject
 							source={require("../../../assets/3D/Drum.obj")}
 							resources={[require("../../../assets/3D/Drumm.mtl")]}
@@ -121,7 +121,7 @@ const PNLARThree2 = createReactClass({
 							type='OBJ'
 							rotation={[0, 0, 0]}
 							visible={this.state.cbShow}
-						/> */}
+						/>
 
 						<ViroQuad
 							rotation={[-90, 0, 0]}
@@ -185,6 +185,16 @@ ViroARTrackingTargets.createTargets({
 		source: Pic24,
 		orientation: "Left",
 		physicalWidth: ARData[23].physicalWidth, // real world width in meters
+	},
+	"31": {
+		source: Pic31,
+		orientation: "Left",
+		physicalWidth: ARData[30].physicalWidth, // real world width in meters
+	},
+	"32": {
+		source: Pic32,
+		orientation: "Left",
+		physicalWidth: ARData[31].physicalWidth, // real world width in meters
 	}
 });
 
