@@ -95,7 +95,7 @@ const PNLARThree2 = createReactClass({
 
 						<Viro3DObject
 							source={require("../../../assets/3D/Jar.obj")}
-							resources={[require("../../../assets/3D/Jar.mtl")]}
+							resources={[require("../../../assets/3D/Jarm.mtl")]}
 							position={[0, 0, 0.03]}
 							scale={[0.015, 0.015, 0.015]}
 							type='OBJ'
