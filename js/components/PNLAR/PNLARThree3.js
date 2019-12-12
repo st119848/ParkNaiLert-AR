@@ -103,7 +103,7 @@ const PNLARThree3 = createReactClass({
 							position={[0, 0, 0.03]}
 							scale={[0.015, 0.015, 0.015]}
 							type='OBJ'
-							rotation={[0, 0, 0]}
+							rotation={[0, 0, -90]}
 							visible={this.state.ciShow}
 						/>
 
@@ -113,7 +113,7 @@ const PNLARThree3 = createReactClass({
 							position={[0, 0, 0.03]}
 							scale={[0.015, 0.015, 0.015]}
 							type='OBJ'
-							rotation={[0, 0, 0]}
+							rotation={[0, 0, -90]}
 							visible={this.state.dzShow}
 						/>
 
@@ -123,7 +123,7 @@ const PNLARThree3 = createReactClass({
 							position={[0, 0, 0.03]}
 							scale={[0.015, 0.015, 0.015]}
 							type='OBJ'
-							rotation={[0, 0, 0]}
+							rotation={[0, 0, -90]}
 							visible={this.state.daShow}
 						/>
 
@@ -133,7 +133,7 @@ const PNLARThree3 = createReactClass({
 							position={[0, 0, 0.03]}
 							scale={[0.015, 0.015, 0.015]}
 							type='OBJ'
-							rotation={[0, 0, 0]}
+							rotation={[0, 0, -90]}
 							visible={this.state.ddShow}
 						/>
 
@@ -143,7 +143,7 @@ const PNLARThree3 = createReactClass({
 							position={[0, 0, 0.03]}
 							scale={[0.015, 0.015, 0.015]}
 							type='OBJ'
-							rotation={[0, 0, 0]}
+							rotation={[0, 0, -90]}
 							visible={this.state.diShow}
 						/>
 
