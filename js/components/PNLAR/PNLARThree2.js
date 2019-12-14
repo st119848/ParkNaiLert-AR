@@ -94,11 +94,10 @@ const PNLARThree2 = createReactClass({
 						/>
 
 						<Viro3DObject
-							source={require("../../../assets/3D/Jar.obj")}
-							resources={[require("../../../assets/3D/Jar.mtl")]}
+							source={require("../../../assets/3D/Jar.glb")}
 							position={[0, 0, 0.03]}
 							scale={[0.015, 0.015, 0.015]}
-							type='OBJ'
+							type='GLB'
 							rotation={[0, 0, -90]}
 							visible={this.state.bdShow}
 						/>
